@@ -11,6 +11,13 @@
 		7A0E36DC1C3A1C7600193018 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E36DB1C3A1C7600193018 /* AppDelegate.m */; };
 		7A0E36DE1C3A1C7600193018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E36DD1C3A1C7600193018 /* Assets.xcassets */; };
 		7A0E36E11C3A1C7600193018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E36DF1C3A1C7600193018 /* LaunchScreen.storyboard */; };
+		7A0E373D1C3A4E2A00193018 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E372F1C3A4E2A00193018 /* DiscoverViewController.m */; };
+		7A0E373E1C3A4E2A00193018 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E37351C3A4E2A00193018 /* MainViewController.m */; };
+		7A0E373F1C3A4E2A00193018 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E373B1C3A4E2A00193018 /* MineViewController.m */; };
+		7A0E37431C3A507E00193018 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37421C3A507E00193018 /* MainStoryboard.storyboard */; };
+		7A0E37451C3A50A000193018 /* MineStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37441C3A50A000193018 /* MineStoryboard.storyboard */; };
+		7A0E37471C3A50E200193018 /* DiscoverStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37461C3A50E200193018 /* DiscoverStoryboard.storyboard */; };
+		93BC11B23DD29939960CE311 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D377AA3005BE36EC7725A0F2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +28,18 @@
 		7A0E36DD1C3A1C7600193018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A0E36E01C3A1C7600193018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A0E36E21C3A1C7600193018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A0E372E1C3A4E2A00193018 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		7A0E372F1C3A4E2A00193018 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		7A0E37341C3A4E2A00193018 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7A0E37351C3A4E2A00193018 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7A0E373A1C3A4E2A00193018 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		7A0E373B1C3A4E2A00193018 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		7A0E37421C3A507E00193018 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		7A0E37441C3A50A000193018 /* MineStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MineStoryboard.storyboard; sourceTree = "<group>"; };
+		7A0E37461C3A50E200193018 /* DiscoverStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DiscoverStoryboard.storyboard; sourceTree = "<group>"; };
+		AA3584C167B7DA6959E3DC01 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B1378C31D94E6C005571E3D7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D377AA3005BE36EC7725A0F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +47,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93BC11B23DD29939960CE311 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115369AF304282A9D085D8AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA3584C167B7DA6959E3DC01 /* Pods.debug.xcconfig */,
+				B1378C31D94E6C005571E3D7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7A0E36CB1C3A1C7600193018 = {
 			isa = PBXGroup;
 			children = (
 				7A0E36D61C3A1C7600193018 /* WeekEndHigh */,
 				7A0E36D51C3A1C7600193018 /* Products */,
+				115369AF304282A9D085D8AF /* Pods */,
+				88E53C595B7FCE169CAAFEA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +84,9 @@
 		7A0E36D61C3A1C7600193018 /* WeekEndHigh */ = {
 			isa = PBXGroup;
 			children = (
+				7A0E372A1C3A4E2A00193018 /* Classes */,
+				7A0E37401C3A4E3200193018 /* Library */,
+				7A0E37411C3A4FCF00193018 /* Resource */,
 				7A0E36DA1C3A1C7600193018 /* AppDelegate.h */,
 				7A0E36DB1C3A1C7600193018 /* AppDelegate.m */,
 				7A0E36DD1C3A1C7600193018 /* Assets.xcassets */,
@@ -71,6 +105,140 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7A0E372A1C3A4E2A00193018 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E372B1C3A4E2A00193018 /* Discover */,
+				7A0E37311C3A4E2A00193018 /* Main */,
+				7A0E37371C3A4E2A00193018 /* Mine */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7A0E372B1C3A4E2A00193018 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E372C1C3A4E2A00193018 /* Modeles */,
+				7A0E372D1C3A4E2A00193018 /* ViewControllers */,
+				7A0E37301C3A4E2A00193018 /* Views */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		7A0E372C1C3A4E2A00193018 /* Modeles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modeles;
+			sourceTree = "<group>";
+		};
+		7A0E372D1C3A4E2A00193018 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E372E1C3A4E2A00193018 /* DiscoverViewController.h */,
+				7A0E372F1C3A4E2A00193018 /* DiscoverViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7A0E37301C3A4E2A00193018 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E37461C3A50E200193018 /* DiscoverStoryboard.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A0E37311C3A4E2A00193018 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E37321C3A4E2A00193018 /* Modeles */,
+				7A0E37331C3A4E2A00193018 /* ViewControllers */,
+				7A0E37361C3A4E2A00193018 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7A0E37321C3A4E2A00193018 /* Modeles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modeles;
+			sourceTree = "<group>";
+		};
+		7A0E37331C3A4E2A00193018 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E37341C3A4E2A00193018 /* MainViewController.h */,
+				7A0E37351C3A4E2A00193018 /* MainViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7A0E37361C3A4E2A00193018 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E37421C3A507E00193018 /* MainStoryboard.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A0E37371C3A4E2A00193018 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E37381C3A4E2A00193018 /* Modeles */,
+				7A0E37391C3A4E2A00193018 /* ViewControllers */,
+				7A0E373C1C3A4E2A00193018 /* Views */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		7A0E37381C3A4E2A00193018 /* Modeles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modeles;
+			sourceTree = "<group>";
+		};
+		7A0E37391C3A4E2A00193018 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E373A1C3A4E2A00193018 /* MineViewController.h */,
+				7A0E373B1C3A4E2A00193018 /* MineViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7A0E373C1C3A4E2A00193018 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A0E37441C3A50A000193018 /* MineStoryboard.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A0E37401C3A4E3200193018 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7A0E37411C3A4FCF00193018 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		88E53C595B7FCE169CAAFEA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D377AA3005BE36EC7725A0F2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A0E36E51C3A1C7600193018 /* Build configuration list for PBXNativeTarget "WeekEndHigh" */;
 			buildPhases = (
+				89755B265E6F0B6C4C053469 /* Check Pods Manifest.lock */,
 				7A0E36D01C3A1C7600193018 /* Sources */,
 				7A0E36D11C3A1C7600193018 /* Frameworks */,
 				7A0E36D21C3A1C7600193018 /* Resources */,
+				4FCB4911D48BE2A94C6DE400 /* Embed Pods Frameworks */,
+				FFD815D6F618749699EED02F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,12 +299,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A0E37471C3A50E200193018 /* DiscoverStoryboard.storyboard in Resources */,
+				7A0E37431C3A507E00193018 /* MainStoryboard.storyboard in Resources */,
 				7A0E36DE1C3A1C7600193018 /* Assets.xcassets in Resources */,
+				7A0E37451C3A50A000193018 /* MineStoryboard.storyboard in Resources */,
 				7A0E36E11C3A1C7600193018 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FCB4911D48BE2A94C6DE400 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89755B265E6F0B6C4C053469 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD815D6F618749699EED02F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A0E36D01C3A1C7600193018 /* Sources */ = {
@@ -141,7 +363,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0E36DC1C3A1C7600193018 /* AppDelegate.m in Sources */,
+				7A0E373D1C3A4E2A00193018 /* DiscoverViewController.m in Sources */,
+				7A0E373F1C3A4E2A00193018 /* MineViewController.m in Sources */,
 				7A0E36D91C3A1C7600193018 /* main.m in Sources */,
+				7A0E373E1C3A4E2A00193018 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -232,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -241,9 +466,11 @@
 		};
 		7A0E36E61C3A1C7600193018 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA3584C167B7DA6959E3DC01 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeekEndHigh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mangoinc.WeekEndHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -252,9 +479,11 @@
 		};
 		7A0E36E71C3A1C7600193018 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1378C31D94E6C005571E3D7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WeekEndHigh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mangoinc.WeekEndHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,6 +509,7 @@
 				7A0E36E71C3A1C7600193018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
