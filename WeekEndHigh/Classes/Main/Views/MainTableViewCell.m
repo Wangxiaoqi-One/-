@@ -22,6 +22,8 @@
 
 @implementation MainTableViewCell
 
+//获取cell时若无可重用cell，将创建新的cell并调用其中的awakeFromNib方法，可通过重写这个方法添加更多页面内容
+
 - (void)awakeFromNib {
     // Initialization code
 }

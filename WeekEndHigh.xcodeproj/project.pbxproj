@@ -19,6 +19,8 @@
 		7A0E37471C3A50E200193018 /* DiscoverStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37461C3A50E200193018 /* DiscoverStoryboard.storyboard */; };
 		7A0E37571C3A767000193018 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E37551C3A767000193018 /* MainTableViewCell.m */; };
 		7A0E37581C3A767000193018 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37561C3A767000193018 /* MainTableViewCell.xib */; };
+		7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6513091C3BA0E3000A02A5 /* MainModel.m */; };
+		7A65130C1C3BA74A000A02A5 /* File.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A65130B1C3BA74A000A02A5 /* File.plist */; };
 		93BC11B23DD29939960CE311 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D377AA3005BE36EC7725A0F2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,9 @@
 		7A0E37541C3A767000193018 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		7A0E37551C3A767000193018 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		7A0E37561C3A767000193018 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		7A6513081C3BA0E3000A02A5 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
+		7A6513091C3BA0E3000A02A5 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
+		7A65130B1C3BA74A000A02A5 /* File.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = File.plist; sourceTree = "<group>"; };
 		AA3584C167B7DA6959E3DC01 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B1378C31D94E6C005571E3D7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D377AA3005BE36EC7725A0F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +172,9 @@
 		7A0E37321C3A4E2A00193018 /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
+				7A65130B1C3BA74A000A02A5 /* File.plist */,
+				7A6513081C3BA0E3000A02A5 /* MainModel.h */,
+				7A6513091C3BA0E3000A02A5 /* MainModel.m */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 			files = (
 				7A0E37581C3A767000193018 /* MainTableViewCell.xib in Resources */,
 				7A0E37471C3A50E200193018 /* DiscoverStoryboard.storyboard in Resources */,
+				7A65130C1C3BA74A000A02A5 /* File.plist in Resources */,
 				7A0E37431C3A507E00193018 /* MainStoryboard.storyboard in Resources */,
 				7A0E36DE1C3A1C7600193018 /* Assets.xcassets in Resources */,
 				7A0E37451C3A50A000193018 /* MineStoryboard.storyboard in Resources */,
@@ -377,6 +386,7 @@
 				7A0E373F1C3A4E2A00193018 /* MineViewController.m in Sources */,
 				7A0E36D91C3A1C7600193018 /* main.m in Sources */,
 				7A0E373E1C3A4E2A00193018 /* MainViewController.m in Sources */,
+				7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--欢乐周末-->
+        <!--召唤师峡谷周末游-->
         <scene sceneID="gVm-w5-Fl5">
             <objects>
                 <viewController id="6eg-eB-m9c" customClass="MainViewController" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.51339040700000005" green="1" blue="0.075632956969999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="欢乐周末" id="PjL-J0-YTj"/>
+                    <navigationItem key="navigationItem" title="召唤师峡谷周末游" id="PjL-J0-YTj"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="FNz-jy-6sK" id="aqh-7f-Az0"/>
@@ -47,6 +47,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="SxN-ED-3FF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.43221174777476767" green="0.82489397897316807" blue="0.80930949271155839" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.97922486066818237" green="0.9849274754524231" blue="0.99226588010787964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
