@@ -14,16 +14,29 @@
                         <viewControllerLayoutGuide type="bottom" id="8oV-Tp-NXT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tlP-sC-Yyk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.42688110070000002" blue="0.33225846250000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FNz-jy-6sK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="6eg-eB-m9c" id="ItF-Op-kFy"/>
+                                    <outlet property="delegate" destination="6eg-eB-m9c" id="DJt-uD-QwK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51339040700000005" green="1" blue="0.075632956969999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="欢乐周末" id="PjL-J0-YTj"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="FNz-jy-6sK" id="aqh-7f-Az0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPU-wS-9sN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742.5" y="215.5"/>
+            <point key="canvasLocation" x="714.5" y="215.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Q2-nx-pLU">
@@ -31,7 +44,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oP1-Oc-dIa" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SxN-ED-3FF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="SxN-ED-3FF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
