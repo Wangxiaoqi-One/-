@@ -49,26 +49,34 @@
     //自定义tableViewt头部
     [self configTableViewHeaderView];
     //网络请求
-//    [self requestModel];
+    [self requestModel];
     
 }
 
 #pragma marks ----------UITableViewDataSource
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    if (section == 0) {
+        return self.activityArray.count;
+    }
+    return self.themeArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MainTableViewCell *mainCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    NSMutableArray *array = self.listArray[indexPath.section];
+    mainCell.mainModel = array[indexPath.row];
     return mainCell;
 }
 
 #pragma marks --------UITableViewDelegate
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 2;
-}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 203;
@@ -129,6 +137,8 @@
                 [self.themeArray addObject:model];
             }
             [self.listArray addObject:self.themeArray];
+            //刷新tableView数据
+            [self.tableView reloadData];
             //广告
             NSArray *adDataArray = dic[@"adData"];
             

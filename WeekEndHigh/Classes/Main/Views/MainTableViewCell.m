@@ -7,6 +7,8 @@
 //
 
 #import "MainTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
 
 @interface MainTableViewCell ()
 //活动图片
@@ -21,6 +23,12 @@
 @end
 
 @implementation MainTableViewCell
+
+- (void)setMainModel:(MainModel *)mainModel{
+    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:mainModel.image_big] placeholderImage:nil];
+    self.activityNameLabel.text = mainModel.title;
+    self.activityPriceLabel.text = mainModel.price;
+}
 
 //获取cell时若无可重用cell，将创建新的cell并调用其中的awakeFromNib方法，可通过重写这个方法添加更多页面内容
 
