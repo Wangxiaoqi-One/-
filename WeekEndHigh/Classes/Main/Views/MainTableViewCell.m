@@ -27,6 +27,12 @@
 - (void)setMainModel:(MainModel *)mainModel{
     [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:mainModel.image_big] placeholderImage:nil];
     self.activityNameLabel.text = mainModel.title;
+    if ([mainModel.type integerValue] != recommendTypeActivity) {
+        self.activityPriceLabel.hidden = YES;
+        self.activityDistanceBtn.hidden = YES;
+    }else{
+        self.activityDistanceBtn.hidden = NO;
+    }
     self.activityPriceLabel.text = mainModel.price;
 }
 

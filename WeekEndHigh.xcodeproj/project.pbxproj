@@ -19,6 +19,13 @@
 		7A0E37471C3A50E200193018 /* DiscoverStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37461C3A50E200193018 /* DiscoverStoryboard.storyboard */; };
 		7A0E37571C3A767000193018 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E37551C3A767000193018 /* MainTableViewCell.m */; };
 		7A0E37581C3A767000193018 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37561C3A767000193018 /* MainTableViewCell.xib */; };
+		7A2DB0751C3CBC1900FC1CB3 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0741C3CBC1900FC1CB3 /* SelectCityViewController.m */; };
+		7A2DB0781C3CBDA600FC1CB3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0771C3CBDA600FC1CB3 /* SearchViewController.m */; };
+		7A2DB07B1C3CBF5400FC1CB3 /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB07A1C3CBF5400FC1CB3 /* ActivityDetailViewController.m */; };
+		7A2DB07E1C3CBF6700FC1CB3 /* ThemeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB07D1C3CBF6700FC1CB3 /* ThemeViewController.m */; };
+		7A2DB0811C3CC00100FC1CB3 /* ClasssifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0801C3CC00100FC1CB3 /* ClasssifyViewController.m */; };
+		7A2DB0841C3CC08600FC1CB3 /* GoodActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0831C3CC08600FC1CB3 /* GoodActivityViewController.m */; };
+		7A2DB0871C3CC09B00FC1CB3 /* HotActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0861C3CC09B00FC1CB3 /* HotActivityViewController.m */; };
 		7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6513091C3BA0E3000A02A5 /* MainModel.m */; };
 		7A65130C1C3BA74A000A02A5 /* File.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A65130B1C3BA74A000A02A5 /* File.plist */; };
 		93BC11B23DD29939960CE311 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D377AA3005BE36EC7725A0F2 /* libPods.a */; };
@@ -44,6 +51,22 @@
 		7A0E37541C3A767000193018 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		7A0E37551C3A767000193018 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		7A0E37561C3A767000193018 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		7A2DB0711C3CAE1C00FC1CB3 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		7A2DB0721C3CB30D00FC1CB3 /* WHdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHdefine.h; sourceTree = "<group>"; };
+		7A2DB0731C3CBC1900FC1CB3 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
+		7A2DB0741C3CBC1900FC1CB3 /* SelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectCityViewController.m; sourceTree = "<group>"; };
+		7A2DB0761C3CBDA600FC1CB3 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		7A2DB0771C3CBDA600FC1CB3 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		7A2DB0791C3CBF5400FC1CB3 /* ActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
+		7A2DB07A1C3CBF5400FC1CB3 /* ActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
+		7A2DB07C1C3CBF6700FC1CB3 /* ThemeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeViewController.h; sourceTree = "<group>"; };
+		7A2DB07D1C3CBF6700FC1CB3 /* ThemeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeViewController.m; sourceTree = "<group>"; };
+		7A2DB07F1C3CC00100FC1CB3 /* ClasssifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClasssifyViewController.h; sourceTree = "<group>"; };
+		7A2DB0801C3CC00100FC1CB3 /* ClasssifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClasssifyViewController.m; sourceTree = "<group>"; };
+		7A2DB0821C3CC08600FC1CB3 /* GoodActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodActivityViewController.h; sourceTree = "<group>"; };
+		7A2DB0831C3CC08600FC1CB3 /* GoodActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodActivityViewController.m; sourceTree = "<group>"; };
+		7A2DB0851C3CC09B00FC1CB3 /* HotActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotActivityViewController.h; sourceTree = "<group>"; };
+		7A2DB0861C3CC09B00FC1CB3 /* HotActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotActivityViewController.m; sourceTree = "<group>"; };
 		7A6513081C3BA0E3000A02A5 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		7A6513091C3BA0E3000A02A5 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		7A65130B1C3BA74A000A02A5 /* File.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = File.plist; sourceTree = "<group>"; };
@@ -182,8 +205,22 @@
 		7A0E37331C3A4E2A00193018 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7A2DB0731C3CBC1900FC1CB3 /* SelectCityViewController.h */,
+				7A2DB0741C3CBC1900FC1CB3 /* SelectCityViewController.m */,
 				7A0E37341C3A4E2A00193018 /* MainViewController.h */,
 				7A0E37351C3A4E2A00193018 /* MainViewController.m */,
+				7A2DB0821C3CC08600FC1CB3 /* GoodActivityViewController.h */,
+				7A2DB0831C3CC08600FC1CB3 /* GoodActivityViewController.m */,
+				7A2DB0851C3CC09B00FC1CB3 /* HotActivityViewController.h */,
+				7A2DB0861C3CC09B00FC1CB3 /* HotActivityViewController.m */,
+				7A2DB07F1C3CC00100FC1CB3 /* ClasssifyViewController.h */,
+				7A2DB0801C3CC00100FC1CB3 /* ClasssifyViewController.m */,
+				7A2DB0791C3CBF5400FC1CB3 /* ActivityDetailViewController.h */,
+				7A2DB07A1C3CBF5400FC1CB3 /* ActivityDetailViewController.m */,
+				7A2DB07C1C3CBF6700FC1CB3 /* ThemeViewController.h */,
+				7A2DB07D1C3CBF6700FC1CB3 /* ThemeViewController.m */,
+				7A2DB0761C3CBDA600FC1CB3 /* SearchViewController.h */,
+				7A2DB0771C3CBDA600FC1CB3 /* SearchViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -236,6 +273,7 @@
 		7A0E37401C3A4E3200193018 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7A2DB0701C3CAE1C00FC1CB3 /* HWBtools */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -245,6 +283,15 @@
 			children = (
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		7A2DB0701C3CAE1C00FC1CB3 /* HWBtools */ = {
+			isa = PBXGroup;
+			children = (
+				7A2DB0711C3CAE1C00FC1CB3 /* Prefix.pch */,
+				7A2DB0721C3CB30D00FC1CB3 /* WHdefine.h */,
+			);
+			path = HWBtools;
 			sourceTree = "<group>";
 		};
 		88E53C595B7FCE169CAAFEA3 /* Frameworks */ = {
@@ -381,10 +428,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0E37571C3A767000193018 /* MainTableViewCell.m in Sources */,
+				7A2DB0871C3CC09B00FC1CB3 /* HotActivityViewController.m in Sources */,
 				7A0E36DC1C3A1C7600193018 /* AppDelegate.m in Sources */,
+				7A2DB0841C3CC08600FC1CB3 /* GoodActivityViewController.m in Sources */,
 				7A0E373D1C3A4E2A00193018 /* DiscoverViewController.m in Sources */,
 				7A0E373F1C3A4E2A00193018 /* MineViewController.m in Sources */,
+				7A2DB07B1C3CBF5400FC1CB3 /* ActivityDetailViewController.m in Sources */,
+				7A2DB0781C3CBDA600FC1CB3 /* SearchViewController.m in Sources */,
+				7A2DB07E1C3CBF6700FC1CB3 /* ThemeViewController.m in Sources */,
 				7A0E36D91C3A1C7600193018 /* main.m in Sources */,
+				7A2DB0811C3CC00100FC1CB3 /* ClasssifyViewController.m in Sources */,
+				7A2DB0751C3CBC1900FC1CB3 /* SelectCityViewController.m in Sources */,
 				7A0E373E1C3A4E2A00193018 /* MainViewController.m in Sources */,
 				7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */,
 			);
@@ -489,6 +543,8 @@
 			baseConfigurationReference = AA3584C167B7DA6959E3DC01 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/aaa/Desktop/周末去哪嗨/WeekEndHigh/WeekEndHigh/Library/HWBtools/Prefix.pch";
 				INFOPLIST_FILE = WeekEndHigh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -502,6 +558,8 @@
 			baseConfigurationReference = B1378C31D94E6C005571E3D7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/aaa/Desktop/周末去哪嗨/WeekEndHigh/WeekEndHigh/Library/HWBtools/Prefix.pch";
 				INFOPLIST_FILE = WeekEndHigh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

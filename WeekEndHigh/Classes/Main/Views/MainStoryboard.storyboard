@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--召唤师峡谷周末游-->
+        <!--周末游-->
         <scene sceneID="gVm-w5-Fl5">
             <objects>
                 <viewController id="6eg-eB-m9c" customClass="MainViewController" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.51339040700000005" green="1" blue="0.075632956969999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="召唤师峡谷周末游" id="PjL-J0-YTj"/>
+                    <navigationItem key="navigationItem" title="周末游" id="PjL-J0-YTj"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="FNz-jy-6sK" id="aqh-7f-Az0"/>

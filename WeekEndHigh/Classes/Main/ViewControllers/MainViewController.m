@@ -11,6 +11,13 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "MainModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "SelectCityViewController.h"
+#import "SearchViewController.h"
+#import "ActivityDetailViewController.h"
+#import "ThemeViewController.h"
+#import "ClasssifyViewController.h"
+#import "GoodActivityViewController.h"
+#import "HotActivityViewController.h"
 
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -78,7 +85,7 @@
     return mainCell;
 }
 
-#pragma marks --------UITableViewDelegate
+#pragma marks  --------------UITableViewDelegate---
 
 
 
@@ -93,7 +100,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [[UIView alloc] init];
-    UIImageView *sectionView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width / 2 - 160, 5, 320, 16)];
+    UIImageView *sectionView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 14)];
     if (section == 0) {
          sectionView.image = [UIImage imageNamed:@"home_recommed_ac"];;
         
@@ -105,27 +112,39 @@
     return sectionView;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        ActivityDetailViewController *activityVC = [[ActivityDetailViewController alloc] init];
+        [self.navigationController pushViewController:activityVC animated:YES];
+    }else{
+        ThemeViewController *themeVC = [[ThemeViewController alloc] init];
+        [self.navigationController pushViewController:themeVC animated:YES];
+    }
+}
+
 #pragma marks ------------Custom Method
 
 //搜索关键字
 - (void)searchActivityAction:(UIButton *)btn{
-
+    SearchViewController *searchVC = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:searchVC animated:YES];
 }
 
 //选择城市
 - (void)selectCityAction:(UIBarButtonItem *)barBtn{
-
+    SelectCityViewController *selectCityVC = [[SelectCityViewController alloc] init];
+    [self.navigationController presentViewController:selectCityVC animated:YES completion:nil];
 }
 
 //自定义tableView头部
 - (void)configTableViewHeaderView{
-    UIView *tableViewHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 343)];
+    UIView *tableViewHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 343)];
     
     
-    UIScrollView *carouselView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 186)];
-    carouselView.contentSize = CGSizeMake(self.adArray.count * [UIScreen mainScreen].bounds.size.width, 186);
+    UIScrollView *carouselView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 186)];
+    carouselView.contentSize = CGSizeMake(self.adArray.count * kScreenWidth, 186);
     for (int i = 0; i < self.adArray.count; i++) {
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width * i, 0, [UIScreen mainScreen].bounds.size.width, 186)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(kScreenWidth * i, 0, kScreenWidth, 186)];
         [imageView sd_setImageWithURL:[NSURL URLWithString:self.adArray[i]] placeholderImage:nil];
         [carouselView addSubview:imageView];
     }
@@ -135,7 +154,7 @@
     //按钮
     for (int i = 0; i < 4; i++) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(i * [UIScreen mainScreen].bounds.size.width / 4, 186, [UIScreen mainScreen].bounds.size.width / 4, [UIScreen mainScreen].bounds.size.width / 4);
+        btn.frame = CGRectMake(i * kScreenWidth / 4, 186, kScreenWidth / 4, kScreenWidth / 4);
         NSString *imageStr = [NSString stringWithFormat:@"home_icon_%02d", i + 1];
         [btn setImage:[UIImage imageNamed:imageStr] forState:UIControlStateNormal];
         btn.tag = 100 + i;
@@ -144,31 +163,32 @@
     }
     
     //精选活动&热门专题
-    UIButton *activityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    activityBtn.frame = CGRectMake(0, 191 + [UIScreen mainScreen].bounds.size.width / 4, [UIScreen mainScreen].bounds.size.width / 2, 343 - 186 - [UIScreen mainScreen].bounds.size.width / 4 - 8);
-    [activityBtn setImage:[UIImage imageNamed:@"home_huodong"] forState:UIControlStateNormal];
-    activityBtn.tag = 104;
-    [activityBtn addTarget:self action:@selector(mainActivityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [tableViewHeaderView addSubview:activityBtn];
+    UIButton *goodActivityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    goodActivityBtn.frame = CGRectMake(0, 191 + kScreenWidth / 4, kScreenWidth / 2, 343 - 186 - kScreenWidth / 4 - 8);
+    [goodActivityBtn setImage:[UIImage imageNamed:@"home_huodong"] forState:UIControlStateNormal];
+    goodActivityBtn.tag = 104;
+    [goodActivityBtn addTarget:self action:@selector(goodActivityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [tableViewHeaderView addSubview:goodActivityBtn];
     
-    UIButton *themeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    themeBtn.frame = CGRectMake([UIScreen mainScreen].bounds.size.width / 2, 191 + [UIScreen mainScreen].bounds.size.width / 4, [UIScreen mainScreen].bounds.size.width / 2, 343 - 186 - [UIScreen mainScreen].bounds.size.width / 4 - 8);
-    [themeBtn setImage:[UIImage imageNamed:@"home_zhuanti"] forState:UIControlStateNormal];
-    themeBtn.tag = 105;
-    [themeBtn addTarget:self action:@selector(mainActivityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [tableViewHeaderView addSubview:themeBtn];
+    UIButton *hotThemeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    hotThemeBtn.frame = CGRectMake(kScreenWidth / 2, 191 + kScreenWidth / 4, kScreenWidth / 2, 343 - 186 - kScreenWidth / 4 - 8);
+    [hotThemeBtn setImage:[UIImage imageNamed:@"home_zhuanti"] forState:UIControlStateNormal];
+    hotThemeBtn.tag = 105;
+    [hotThemeBtn addTarget:self action:@selector(hotActivityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [tableViewHeaderView addSubview:hotThemeBtn];
     
     self.tableView.tableHeaderView = tableViewHeaderView;
 }
 
 //网络请求
 - (void)requestModel{
-    NSString *urlString = @"http://e.kumi.cn/app/v1.3/index.php?_s_=02a411494fa910f5177d82a6b0a63788&_t_=1451307342&channelid=appstore&cityid=1&lat=34.62172291944134&limit=30&lng=112.4149512442411&page=1";
+    NSString *urlString = kMainDataList;
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
     [manager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        NSLog(@"%lld", downloadProgress.totalUnitCount);
+        WXQLog(@"%lld", downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        WXQLog(@"%@", responseObject);
         NSDictionary *resultDic = responseObject;
         NSString *status = resultDic[@"status"];
         NSInteger code = [resultDic[@"code"] integerValue];
@@ -204,14 +224,23 @@
             self.navigationItem.leftBarButtonItem.title = cityName;
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error);
+        WXQLog(@"%@", error);
     }];
 }
 
 -(void)mainActivityButtonAction:(UIButton *)btn{
-
+    ClasssifyViewController *classifyVC = [[ClasssifyViewController alloc] init];
+    [self.navigationController pushViewController:classifyVC animated:YES];
 }
 
+-(void)goodActivityButtonAction:(UIButton *)btn{
+    GoodActivityViewController *goodActivityVC = [[GoodActivityViewController alloc] init];
+    [self.navigationController pushViewController:goodActivityVC animated:YES];
+}
+-(void)hotActivityButtonAction:(UIButton *)btn{
+    HotActivityViewController *hotActivityVC = [[HotActivityViewController alloc] init];
+    [self.navigationController pushViewController:hotActivityVC animated:YES];
+}
 
 #pragma mark ----------lazy loading
 
