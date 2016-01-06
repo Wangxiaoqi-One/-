@@ -26,6 +26,8 @@
 		7A2DB0811C3CC00100FC1CB3 /* ClasssifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0801C3CC00100FC1CB3 /* ClasssifyViewController.m */; };
 		7A2DB0841C3CC08600FC1CB3 /* GoodActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0831C3CC08600FC1CB3 /* GoodActivityViewController.m */; };
 		7A2DB0871C3CC09B00FC1CB3 /* HotActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0861C3CC09B00FC1CB3 /* HotActivityViewController.m */; };
+		7A2DB08B1C3D1BBC00FC1CB3 /* activityDetail in Resources */ = {isa = PBXBuildFile; fileRef = 7A2DB08A1C3D1BBC00FC1CB3 /* activityDetail */; };
+		7A2DB08E1C3D204000FC1CB3 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB08D1C3D204000FC1CB3 /* UIViewController+Common.m */; };
 		7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6513091C3BA0E3000A02A5 /* MainModel.m */; };
 		7A65130C1C3BA74A000A02A5 /* File.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A65130B1C3BA74A000A02A5 /* File.plist */; };
 		93BC11B23DD29939960CE311 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D377AA3005BE36EC7725A0F2 /* libPods.a */; };
@@ -67,6 +69,9 @@
 		7A2DB0831C3CC08600FC1CB3 /* GoodActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodActivityViewController.m; sourceTree = "<group>"; };
 		7A2DB0851C3CC09B00FC1CB3 /* HotActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotActivityViewController.h; sourceTree = "<group>"; };
 		7A2DB0861C3CC09B00FC1CB3 /* HotActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotActivityViewController.m; sourceTree = "<group>"; };
+		7A2DB08A1C3D1BBC00FC1CB3 /* activityDetail */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = activityDetail; sourceTree = "<group>"; };
+		7A2DB08C1C3D204000FC1CB3 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
+		7A2DB08D1C3D204000FC1CB3 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
 		7A6513081C3BA0E3000A02A5 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		7A6513091C3BA0E3000A02A5 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		7A65130B1C3BA74A000A02A5 /* File.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = File.plist; sourceTree = "<group>"; };
@@ -195,6 +200,7 @@
 		7A0E37321C3A4E2A00193018 /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
+				7A2DB08A1C3D1BBC00FC1CB3 /* activityDetail */,
 				7A65130B1C3BA74A000A02A5 /* File.plist */,
 				7A6513081C3BA0E3000A02A5 /* MainModel.h */,
 				7A6513091C3BA0E3000A02A5 /* MainModel.m */,
@@ -288,6 +294,8 @@
 		7A2DB0701C3CAE1C00FC1CB3 /* HWBtools */ = {
 			isa = PBXGroup;
 			children = (
+				7A2DB08C1C3D204000FC1CB3 /* UIViewController+Common.h */,
+				7A2DB08D1C3D204000FC1CB3 /* UIViewController+Common.m */,
 				7A2DB0711C3CAE1C00FC1CB3 /* Prefix.pch */,
 				7A2DB0721C3CB30D00FC1CB3 /* WHdefine.h */,
 			);
@@ -368,6 +376,7 @@
 				7A0E37431C3A507E00193018 /* MainStoryboard.storyboard in Resources */,
 				7A0E36DE1C3A1C7600193018 /* Assets.xcassets in Resources */,
 				7A0E37451C3A50A000193018 /* MineStoryboard.storyboard in Resources */,
+				7A2DB08B1C3D1BBC00FC1CB3 /* activityDetail in Resources */,
 				7A0E36E11C3A1C7600193018 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +449,7 @@
 				7A2DB0811C3CC00100FC1CB3 /* ClasssifyViewController.m in Sources */,
 				7A2DB0751C3CBC1900FC1CB3 /* SelectCityViewController.m in Sources */,
 				7A0E373E1C3A4E2A00193018 /* MainViewController.m in Sources */,
+				7A2DB08E1C3D204000FC1CB3 /* UIViewController+Common.m in Sources */,
 				7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

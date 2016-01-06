@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"热门专题";
-    self.view.backgroundColor = [UIColor redColor];
+    [self showBackButton];
 }
 
 - (void)didReceiveMemoryWarning {

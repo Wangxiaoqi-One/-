@@ -7,6 +7,8 @@
 //
 
 #import "ActivityDetailViewController.h"
+#import <AFNetworking/AFHTTPSessionManager.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface ActivityDetailViewController ()
 
@@ -18,8 +20,32 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"活动详情";
-    self.view.backgroundColor = [UIColor redColor];
+    
+    [self showBackButton];
+    
+    
+//    [self getModel];
 }
+
+
+#pragma mark ----------Custom Method
+
+- (void)getModel{
+    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [sessionManager GET:[NSString stringWithFormat:kActicityDetail, _activityId] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        WXQLog(@"%lld", downloadProgress.totalUnitCount);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        WXQLog(@"%@", responseObject);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        WXQLog(@"%@", error);
+    }];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
