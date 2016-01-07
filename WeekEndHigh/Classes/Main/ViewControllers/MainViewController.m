@@ -126,7 +126,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        ActivityDetailViewController *activityVC = [[ActivityDetailViewController alloc] init];
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+        //活动ID
+        MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
+        ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"activityDetailId"];
+        activityVC.activityId = mainModel.activityId;
         [self.navigationController pushViewController:activityVC animated:YES];
     }else{
         ThemeViewController *themeVC = [[ThemeViewController alloc] init];
@@ -352,7 +356,7 @@
     NSString *type = self.adArray[addButton.tag - 100][@"type"];
     if ([type integerValue] == 1) {
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-        
+        //活动ID
         ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"activityDetailId"];
         activityVC.activityId = self.adArray[addButton.tag - 100][@"id"];
         [self.navigationController pushViewController:activityVC animated:YES];

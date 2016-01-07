@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) IBOutlet ActivityDetailView *activityDetailView;
 
+@property (strong, nonatomic) NSString *phoneNumber;
+
 @end
 
 @implementation ActivityDetailViewController
@@ -25,6 +27,10 @@
     self.navigationItem.title = @"活动详情";
     [self showBackButton];
    
+    //去地图页面
+    [self.activityDetailView.mapButton addTarget:self action:@selector(mapButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    //打电话
+    [self.activityDetailView.makeCallButton addTarget:self action:@selector(makeCallButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     
     [self getModel];
 }
@@ -39,7 +45,7 @@
     [sessionManager GET:[NSString stringWithFormat:kActicityDetail, _activityId] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         WXQLog(@"%lld", downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        WXQLog(@"%@", responseObject);
+//        WXQLog(@"%@", responseObject);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         NSDictionary *dic= responseObject;
@@ -59,7 +65,21 @@
     }];
 }
 
+//去地图页
+- (void)mapButtonAction:(UIButton *)mapButton{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://maps.google.com/map"]];
+}
 
+//打电话
+- (void)makeCallButtonAction:(UIButton *)makeCallButton{
+//程序内打电话，打完电话之后返回当前应用程序
+    UIWebView *cellPhoneNumber = [[UIWebView alloc] init];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", _phoneNumber]]];
+    [cellPhoneNumber loadRequest:request];
+    [self.view addSubview:cellPhoneNumber];
+    //程序外打电话，打完电话之后不返回当前应用程序
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", _phoneNumber]]];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
