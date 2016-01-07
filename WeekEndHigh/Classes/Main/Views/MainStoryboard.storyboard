@@ -36,7 +36,130 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPU-wS-9sN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="714.5" y="215.5"/>
+            <point key="canvasLocation" x="486.5" y="215.5"/>
+        </scene>
+        <!--Activity Detail View Controller-->
+        <scene sceneID="X3H-Y6-SEH">
+            <objects>
+                <viewController storyboardIdentifier="activityDetailId" id="rMp-eD-hQq" customClass="ActivityDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x47-q3-bzj"/>
+                        <viewControllerLayoutGuide type="bottom" id="uAP-bi-86H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8hQ-6a-epp" customClass="ActivityDetailView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sjt-Fa-MIU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRo-jl-nbT">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="186"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="活动标题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHU-5S-78K">
+                                        <rect key="frame" x="0.0" y="183" width="375" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-VP-bh4">
+                                        <rect key="frame" x="0.0" y="223" width="220" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="多少人已喜欢" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTz-jO-tT5">
+                                        <rect key="frame" x="241" y="223" width="126" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayLine" translatesAutoresizingMaskIntoConstraints="NO" id="xkg-TF-FbX">
+                                        <rect key="frame" x="0.0" y="252" width="375" height="1"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="价格参考：电询" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6de-ca-cfi">
+                                        <rect key="frame" x="0.0" y="261" width="375" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayLine" translatesAutoresizingMaskIntoConstraints="NO" id="NYV-jJ-ecz">
+                                        <rect key="frame" x="0.0" y="295" width="375" height="1"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ac_location_normal" translatesAutoresizingMaskIntoConstraints="NO" id="laT-cv-WdY">
+                                        <rect key="frame" x="8" y="304" width="21" height="25"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="地址" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91Q-ah-Rxh">
+                                        <rect key="frame" x="37" y="304" width="297" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list_make_out" translatesAutoresizingMaskIntoConstraints="NO" id="vGO-6f-GuN">
+                                        <rect key="frame" x="351" y="304" width="10" height="25"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayLine" translatesAutoresizingMaskIntoConstraints="NO" id="Ixi-f4-SiL">
+                                        <rect key="frame" x="0.0" y="340" width="375" height="1"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="Rr5-tp-u1j">
+                                        <rect key="frame" x="8" y="350" width="21" height="25"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="list_make_out" translatesAutoresizingMaskIntoConstraints="NO" id="INF-Jb-Iee">
+                                        <rect key="frame" x="351" y="350" width="10" height="25"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayLine" translatesAutoresizingMaskIntoConstraints="NO" id="iHn-ao-49I">
+                                        <rect key="frame" x="0.0" y="382" width="375" height="20"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ac_details_img" translatesAutoresizingMaskIntoConstraints="NO" id="Qhk-ai-p1u">
+                                        <rect key="frame" x="8" y="410" width="21" height="21"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="活动详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxl-aF-gJw">
+                                        <rect key="frame" x="37" y="410" width="338" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayLine" translatesAutoresizingMaskIntoConstraints="NO" id="yux-Hz-BiV">
+                                        <rect key="frame" x="0.0" y="439" width="375" height="1"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Q-GX-BIF">
+                                        <rect key="frame" x="8" y="302" width="359" height="30"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxH-Px-MA2">
+                                        <rect key="frame" x="8" y="354" width="359" height="30"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmt-aj-JUn">
+                                        <rect key="frame" x="37" y="350" width="297" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="tintColor" red="0.41447942869999999" green="0.77007798390000004" blue="0.79561191870000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="activityAddressLabel" destination="91Q-ah-Rxh" id="HEV-2d-pcO"/>
+                            <outlet property="activityFavoriteLabel" destination="UTz-jO-tT5" id="eox-Lc-Q1F"/>
+                            <outlet property="activityLabel" destination="dHU-5S-78K" id="oLc-oo-qyv"/>
+                            <outlet property="activityPhoneNumberLabel" destination="vmt-aj-JUn" id="a2C-l4-hUt"/>
+                            <outlet property="activityPriceLabel" destination="6de-ca-cfi" id="Vct-Bv-c76"/>
+                            <outlet property="activityTimeLabel" destination="EUf-VP-bh4" id="bzj-ao-HFL"/>
+                            <outlet property="headImageView" destination="cRo-jl-nbT" id="rc6-vr-nsw"/>
+                            <outlet property="mainScrollView" destination="Sjt-Fa-MIU" id="7eP-QT-eBj"/>
+                            <outlet property="makeCallButton" destination="oxH-Px-MA2" id="YZl-LV-JMN"/>
+                            <outlet property="mapButton" destination="Z9Q-GX-BIF" id="KGX-gm-5Xn"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="activityDetailView" destination="8hQ-6a-epp" id="Dvy-PV-fp7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q7p-RO-QNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942.5" y="215.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Q2-nx-pLU">
@@ -59,7 +182,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJu-Dl-v7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245.5" y="215.5"/>
+            <point key="canvasLocation" x="25.5" y="215.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ac_details_img" width="20" height="20"/>
+        <image name="ac_location_normal" width="25" height="30"/>
+        <image name="grayLine" width="1" height="1"/>
+        <image name="list_make_out" width="8" height="15"/>
+        <image name="phone" width="24" height="22"/>
+    </resources>
 </document>

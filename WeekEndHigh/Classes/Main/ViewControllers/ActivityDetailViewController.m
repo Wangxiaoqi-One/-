@@ -9,8 +9,11 @@
 #import "ActivityDetailViewController.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "ActivityDetailView.h"
 
 @interface ActivityDetailViewController ()
+
+@property (strong, nonatomic) IBOutlet ActivityDetailView *activityDetailView;
 
 @end
 
@@ -21,9 +24,9 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"活动详情";
     [self showBackButton];
+   
     
-    
-//    [self getModel];
+    [self getModel];
 }
 
 
@@ -38,6 +41,18 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         WXQLog(@"%@", responseObject);
         [MBProgressHUD hideHUDForView:self.view animated:YES];
+        
+        NSDictionary *dic= responseObject;
+        NSString *status = dic[@"status"];
+        NSInteger code = [dic[@"code"] integerValue];
+        if ([status isEqualToString:@"success"] && code == 0) {
+        
+            NSDictionary *successDic = dic[@"success"];
+            self.activityDetailView.dataDic = successDic;
+        }else{
+        
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         WXQLog(@"%@", error);
