@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"四个按钮";
+    self.navigationItem.title = @"分类列表";
     self.view.backgroundColor = [UIColor redColor];
 }
 

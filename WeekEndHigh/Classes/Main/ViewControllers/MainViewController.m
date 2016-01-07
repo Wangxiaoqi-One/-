@@ -93,6 +93,7 @@
     MainTableViewCell *mainCell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     NSMutableArray *array = self.listArray[indexPath.section];
     mainCell.mainModel = array[indexPath.row];
+    mainCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return mainCell;
 }
 

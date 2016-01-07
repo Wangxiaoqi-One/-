@@ -32,6 +32,7 @@
         self.activityDistanceBtn.hidden = YES;
     }else{
         self.activityDistanceBtn.hidden = NO;
+        self.activityPriceLabel.hidden = NO;
     }
     self.activityPriceLabel.text = mainModel.price;
 }

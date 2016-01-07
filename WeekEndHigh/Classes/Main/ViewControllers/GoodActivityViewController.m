@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"推荐活动";
+    self.navigationItem.title = @"精选活动";
     self.view.backgroundColor = [UIColor redColor];
 }
 
