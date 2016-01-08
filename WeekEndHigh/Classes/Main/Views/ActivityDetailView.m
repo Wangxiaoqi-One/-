@@ -80,7 +80,9 @@
             _previousImageBottom = label.bottom + 10;
         }else{
         for (NSDictionary *dict in urlsArray) {
-            UIImageView *imagView = [[UIImageView alloc] initWithFrame:CGRectMake(10, _previousImageBottom + 10, kScreenWidth - 20, [dict[@"height"] integerValue] / 2)];
+            CGFloat width = [dict[@"width"] integerValue];
+            CGFloat imageHeight = [dict[@"height"] integerValue];
+            UIImageView *imagView = [[UIImageView alloc] initWithFrame:CGRectMake(10, _previousImageBottom + 10, kScreenWidth - 20, (kScreenWidth - 20) / width * imageHeight)];
             [imagView sd_setImageWithURL:[NSURL URLWithString:dict[@"url"]] placeholderImage:nil];
             [self.mainScrollView addSubview:imagView];
             
@@ -89,7 +91,7 @@
         }
         }
     }
-    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth, _previousImageBottom + 74);
+    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth, _previousImageBottom + 20);
 }
 
 - (void)awakeFromNib{

@@ -10,6 +10,8 @@
 
 @implementation HWTools
 
+#pragma mark --------时间转化方法
+
 + (NSString *)getDateFromString:(NSString *)timestamp{
     NSTimeInterval times = [timestamp doubleValue];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:times];
@@ -17,6 +19,16 @@
     [dateFormatter setDateFormat:@"yyyy.MM.dd"];
     NSString *time = [dateFormatter stringFromDate:date];
     return time;
+}
+
++(NSDate *)getSystemNowDate{
+//    WXQLog(@"%s - [%d]",__FUNCTION__,__LINE__);
+    //创建一个NSDataFormatter显示刷新时间
+    NSDateFormatter *df = [[NSDateFormatter alloc] init ];
+    df.dateFormat = @"yyyy-MM-dd HH:mm";
+    NSString *dateStr = [df stringFromDate:[NSDate date]];
+    NSDate *date = [df dateFromString:dateStr];
+    return date;
 }
 
 #pragma mark ----------根据文字最大显示宽高和文字内容返回文字高度

@@ -10,4 +10,6 @@
 
 @interface ThemeViewController : UIViewController
 
+@property (strong, nonatomic) NSString *themeId;
+
 @end

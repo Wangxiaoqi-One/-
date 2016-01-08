@@ -1,7 +1,7 @@
 //
 //  ActivityDetailViewController.m
 //  WeekEndHigh
-//
+//  活动详情
 //  Created by scjy on 16/1/6.
 //  Copyright © 2016年 scjy. All rights reserved.
 //
@@ -26,7 +26,8 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"活动详情";
     [self showBackButton];
-   
+    //在第二级页面隐藏tabBar。
+    self.tabBarController.tabBar.hidden = YES;
     //去地图页面
     [self.activityDetailView.mapButton addTarget:self action:@selector(mapButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     //打电话
@@ -67,7 +68,7 @@
 
 //去地图页
 - (void)mapButtonAction:(UIButton *)mapButton{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://maps.google.com/map"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://map.baidu.com"]];
 }
 
 //打电话

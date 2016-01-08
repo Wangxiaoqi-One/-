@@ -19,6 +19,7 @@
 #import "GoodActivityViewController.h"
 #import "HotActivityViewController.h"
 
+
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //全部列表数据
@@ -70,7 +71,7 @@
     //自定义tableViewt头部
     [self configTableViewHeaderView];
     //网络请求
-    [self requestModel];
+//    [self requestModel];
     //启动定时器
     [self startTimer];
 }
@@ -125,15 +126,15 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
     if (indexPath.section == 0) {
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-        //活动ID
-        MainModel *mainModel = self.listArray[indexPath.section][indexPath.row];
         ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"activityDetailId"];
         activityVC.activityId = mainModel.activityId;
         [self.navigationController pushViewController:activityVC animated:YES];
     }else{
         ThemeViewController *themeVC = [[ThemeViewController alloc] init];
+        themeVC.themeId = mainModel.activityId;
         [self.navigationController pushViewController:themeVC animated:YES];
     }
 }
@@ -193,7 +194,7 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
     [manager GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        WXQLog(@"%lld", downloadProgress.totalUnitCount);
+//        WXQLog(@"%lld", downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *resultDic = responseObject;
         NSString *status = resultDic[@"status"];
@@ -240,10 +241,14 @@
     [self.navigationController pushViewController:classifyVC animated:YES];
 }
 
+//精选活动
+
 -(void)goodActivityButtonAction:(UIButton *)btn{
     GoodActivityViewController *goodActivityVC = [[GoodActivityViewController alloc] init];
     [self.navigationController pushViewController:goodActivityVC animated:YES];
 }
+
+//热门专题
 -(void)hotActivityButtonAction:(UIButton *)btn{
     HotActivityViewController *hotActivityVC = [[HotActivityViewController alloc] init];
     [self.navigationController pushViewController:hotActivityVC animated:YES];
@@ -263,11 +268,13 @@
 //每两秒执行一次，图片自动轮播
 - (void)rollAnimation{
     //把page当前页加1;
+    if (self.adArray.count > 0) {
      NSInteger page = (self.pageControl.currentPage + 1) % self.adArray.count;
     //计算出scrollView应该滚动的X轴坐标
     self.pageControl.currentPage = page;
     CGFloat offsetx = self.pageControl.currentPage * kScreenWidth;
     [self.carouselView setContentOffset:CGPointMake(offsetx, 0) animated:YES];
+    }
 }
 
 //当手动去滑动scrollView的时候，定时器依然在计算时间，可能我们刚滑到下一页，定时器时间又刚好触发，导致当前页停留的时间不够2秒
@@ -332,7 +339,7 @@
     if (_activityBtn == nil) {
         //精选活动&热门专题
         self.activityBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.activityBtn.frame = CGRectMake(0, 191 + kScreenWidth / 4, kScreenWidth / 2, 343 - 186 - kScreenWidth / 4 - 8);
+        self.activityBtn.frame = CGRectMake(0, 186 + kScreenWidth / 4, kScreenWidth / 2, 157 - kScreenWidth / 4);
         [self.activityBtn setImage:[UIImage imageNamed:@"home_huodong"] forState:UIControlStateNormal];
         self.activityBtn.tag = 104;
         [self.activityBtn addTarget:self action:@selector(goodActivityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -343,7 +350,7 @@
 - (UIButton *)themeBtn{
     if (_themeBtn == nil) {
         self.themeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.themeBtn.frame = CGRectMake(kScreenWidth / 2, 191 + kScreenWidth / 4, kScreenWidth / 2, 343 - 186 - kScreenWidth / 4 - 8);
+        self.themeBtn.frame = CGRectMake(kScreenWidth / 2, 186 + kScreenWidth / 4, kScreenWidth / 2, 157 - kScreenWidth / 4);
         [self.themeBtn setImage:[UIImage imageNamed:@"home_zhuanti"] forState:UIControlStateNormal];
         self.themeBtn.tag = 105;
         [self.themeBtn addTarget:self action:@selector(hotActivityButtonAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -361,8 +368,10 @@
         activityVC.activityId = self.adArray[addButton.tag - 100][@"id"];
         [self.navigationController pushViewController:activityVC animated:YES];
     }else{
-        HotActivityViewController *hotVC = [[HotActivityViewController alloc] init];
-        [self.navigationController pushViewController:hotVC animated:YES];
+        ThemeViewController *themeVC = [[ThemeViewController alloc] init];
+        themeVC.themeId = self.adArray[addButton.tag - 100][@"id"];
+        [self.navigationController pushViewController:themeVC animated:YES];
+
     }
 
 }
@@ -395,7 +404,11 @@
     [self startTimer];
 }
 
-
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //取消隐藏tabBar
+    self.tabBarController.tabBar.hidden = NO;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

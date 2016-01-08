@@ -29,10 +29,19 @@
 		7A2DB08E1C3D204000FC1CB3 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB08D1C3D204000FC1CB3 /* UIViewController+Common.m */; };
 		7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6513091C3BA0E3000A02A5 /* MainModel.m */; };
 		7A65130C1C3BA74A000A02A5 /* File.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A65130B1C3BA74A000A02A5 /* File.plist */; };
+		7AD1245A1C3F9E0F00FDD064 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AD124561C3F9E0F00FDD064 /* blueArrow.png */; };
+		7AD1245B1C3F9E0F00FDD064 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AD124571C3F9E0F00FDD064 /* blueArrowDown.png */; };
+		7AD1245C1C3F9E0F00FDD064 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD124591C3F9E0F00FDD064 /* PullingRefreshTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7AD124601C3FA3AF00FDD064 /* GoodActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD1245E1C3FA3AF00FDD064 /* GoodActivityTableViewCell.m */; };
+		7AD124611C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD1245F1C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib */; };
+		7AD124651C3FBBF000FDD064 /* cacaca.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AD124641C3FBBF000FDD064 /* cacaca.plist */; };
+		7AD124681C3FBE5900FDD064 /* GoodActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD124671C3FBE5900FDD064 /* GoodActivityModel.m */; };
 		7AE96A921C3E112700F5163A /* ActivityDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE96A911C3E112700F5163A /* ActivityDetailView.m */; };
 		7AE96A951C3E4C4500F5163A /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE96A941C3E4C4500F5163A /* HWTools.m */; };
 		7AE96A971C3E540900F5163A /* activityDetail.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AE96A961C3E540900F5163A /* activityDetail.plist */; };
 		7AE96A9A1C3E5B2300F5163A /* UIView+UIViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE96A991C3E5B2300F5163A /* UIView+UIViewExtension.m */; };
+		7AFFFEBE1C3F5D4B0067BA36 /* Activitytheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AFFFEBD1C3F5D4B0067BA36 /* Activitytheme.plist */; };
+		7AFFFEC11C3F5F070067BA36 /* ActivityThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFFFEC01C3F5F070067BA36 /* ActivityThemeView.m */; };
 		93BC11B23DD29939960CE311 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D377AA3005BE36EC7725A0F2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +86,16 @@
 		7A6513081C3BA0E3000A02A5 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		7A6513091C3BA0E3000A02A5 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		7A65130B1C3BA74A000A02A5 /* File.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = File.plist; sourceTree = "<group>"; };
+		7AD124561C3F9E0F00FDD064 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		7AD124571C3F9E0F00FDD064 /* blueArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrowDown.png; sourceTree = "<group>"; };
+		7AD124581C3F9E0F00FDD064 /* PullingRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullingRefreshTableView.h; sourceTree = "<group>"; };
+		7AD124591C3F9E0F00FDD064 /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
+		7AD1245D1C3FA3AF00FDD064 /* GoodActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodActivityTableViewCell.h; sourceTree = "<group>"; };
+		7AD1245E1C3FA3AF00FDD064 /* GoodActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodActivityTableViewCell.m; sourceTree = "<group>"; };
+		7AD1245F1C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodActivityTableViewCell.xib; sourceTree = "<group>"; };
+		7AD124641C3FBBF000FDD064 /* cacaca.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cacaca.plist; sourceTree = "<group>"; };
+		7AD124661C3FBE5900FDD064 /* GoodActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodActivityModel.h; sourceTree = "<group>"; };
+		7AD124671C3FBE5900FDD064 /* GoodActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodActivityModel.m; sourceTree = "<group>"; };
 		7AE96A901C3E112700F5163A /* ActivityDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailView.h; sourceTree = "<group>"; };
 		7AE96A911C3E112700F5163A /* ActivityDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailView.m; sourceTree = "<group>"; };
 		7AE96A931C3E4C4500F5163A /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTools.h; sourceTree = "<group>"; };
@@ -84,6 +103,9 @@
 		7AE96A961C3E540900F5163A /* activityDetail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = activityDetail.plist; sourceTree = "<group>"; };
 		7AE96A981C3E5B2300F5163A /* UIView+UIViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIViewExtension.h"; sourceTree = "<group>"; };
 		7AE96A991C3E5B2300F5163A /* UIView+UIViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIViewExtension.m"; sourceTree = "<group>"; };
+		7AFFFEBD1C3F5D4B0067BA36 /* Activitytheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Activitytheme.plist; sourceTree = "<group>"; };
+		7AFFFEBF1C3F5F070067BA36 /* ActivityThemeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityThemeView.h; sourceTree = "<group>"; };
+		7AFFFEC01C3F5F070067BA36 /* ActivityThemeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityThemeView.m; sourceTree = "<group>"; };
 		AA3584C167B7DA6959E3DC01 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B1378C31D94E6C005571E3D7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D377AA3005BE36EC7725A0F2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,10 +231,14 @@
 		7A0E37321C3A4E2A00193018 /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
+				7AD124641C3FBBF000FDD064 /* cacaca.plist */,
+				7AFFFEBD1C3F5D4B0067BA36 /* Activitytheme.plist */,
 				7AE96A961C3E540900F5163A /* activityDetail.plist */,
 				7A65130B1C3BA74A000A02A5 /* File.plist */,
 				7A6513081C3BA0E3000A02A5 /* MainModel.h */,
 				7A6513091C3BA0E3000A02A5 /* MainModel.m */,
+				7AD124661C3FBE5900FDD064 /* GoodActivityModel.h */,
+				7AD124671C3FBE5900FDD064 /* GoodActivityModel.m */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -249,6 +275,11 @@
 				7A0E37541C3A767000193018 /* MainTableViewCell.h */,
 				7A0E37551C3A767000193018 /* MainTableViewCell.m */,
 				7A0E37561C3A767000193018 /* MainTableViewCell.xib */,
+				7AFFFEBF1C3F5F070067BA36 /* ActivityThemeView.h */,
+				7AFFFEC01C3F5F070067BA36 /* ActivityThemeView.m */,
+				7AD1245D1C3FA3AF00FDD064 /* GoodActivityTableViewCell.h */,
+				7AD1245E1C3FA3AF00FDD064 /* GoodActivityTableViewCell.m */,
+				7AD1245F1C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -290,6 +321,7 @@
 		7A0E37401C3A4E3200193018 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7AD124551C3F9E0F00FDD064 /* PullingRefreshTableView */,
 				7A2DB0701C3CAE1C00FC1CB3 /* HWBtools */,
 			);
 			path = Library;
@@ -315,6 +347,17 @@
 				7A2DB0721C3CB30D00FC1CB3 /* WHdefine.h */,
 			);
 			path = HWBtools;
+			sourceTree = "<group>";
+		};
+		7AD124551C3F9E0F00FDD064 /* PullingRefreshTableView */ = {
+			isa = PBXGroup;
+			children = (
+				7AD124561C3F9E0F00FDD064 /* blueArrow.png */,
+				7AD124571C3F9E0F00FDD064 /* blueArrowDown.png */,
+				7AD124581C3F9E0F00FDD064 /* PullingRefreshTableView.h */,
+				7AD124591C3F9E0F00FDD064 /* PullingRefreshTableView.m */,
+			);
+			path = PullingRefreshTableView;
 			sourceTree = "<group>";
 		};
 		88E53C595B7FCE169CAAFEA3 /* Frameworks */ = {
@@ -386,11 +429,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0E37581C3A767000193018 /* MainTableViewCell.xib in Resources */,
+				7AFFFEBE1C3F5D4B0067BA36 /* Activitytheme.plist in Resources */,
 				7A0E37471C3A50E200193018 /* DiscoverStoryboard.storyboard in Resources */,
 				7A65130C1C3BA74A000A02A5 /* File.plist in Resources */,
+				7AD1245B1C3F9E0F00FDD064 /* blueArrowDown.png in Resources */,
 				7A0E37431C3A507E00193018 /* MainStoryboard.storyboard in Resources */,
+				7AD124651C3FBBF000FDD064 /* cacaca.plist in Resources */,
 				7A0E36DE1C3A1C7600193018 /* Assets.xcassets in Resources */,
+				7AD124611C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib in Resources */,
 				7A0E37451C3A50A000193018 /* MineStoryboard.storyboard in Resources */,
+				7AD1245A1C3F9E0F00FDD064 /* blueArrow.png in Resources */,
 				7AE96A971C3E540900F5163A /* activityDetail.plist in Resources */,
 				7A0E36E11C3A1C7600193018 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -460,15 +508,19 @@
 				7A0E373F1C3A4E2A00193018 /* MineViewController.m in Sources */,
 				7A2DB07B1C3CBF5400FC1CB3 /* ActivityDetailViewController.m in Sources */,
 				7A2DB0781C3CBDA600FC1CB3 /* SearchViewController.m in Sources */,
+				7AD124681C3FBE5900FDD064 /* GoodActivityModel.m in Sources */,
 				7AE96A9A1C3E5B2300F5163A /* UIView+UIViewExtension.m in Sources */,
 				7A2DB07E1C3CBF6700FC1CB3 /* ThemeViewController.m in Sources */,
+				7AFFFEC11C3F5F070067BA36 /* ActivityThemeView.m in Sources */,
 				7A0E36D91C3A1C7600193018 /* main.m in Sources */,
+				7AD1245C1C3F9E0F00FDD064 /* PullingRefreshTableView.m in Sources */,
 				7AE96A921C3E112700F5163A /* ActivityDetailView.m in Sources */,
 				7A2DB0811C3CC00100FC1CB3 /* ClasssifyViewController.m in Sources */,
 				7A2DB0751C3CBC1900FC1CB3 /* SelectCityViewController.m in Sources */,
 				7A0E373E1C3A4E2A00193018 /* MainViewController.m in Sources */,
 				7A2DB08E1C3D204000FC1CB3 /* UIViewController+Common.m in Sources */,
 				7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */,
+				7AD124601C3FA3AF00FDD064 /* GoodActivityTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -559,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
