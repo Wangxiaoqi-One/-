@@ -102,7 +102,7 @@
         WXQLog(@"%@", error);
     }];
 
-    [self.tableView tableViewDidFinishedLoading];
+   [self.tableView tableViewDidFinishedLoading];
    self.tableView.reachedTheEnd = NO;
 }
 //手指开始拖动方法

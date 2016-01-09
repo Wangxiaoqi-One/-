@@ -53,6 +53,7 @@
     //活动详情
     _previousImageBottom = 444;
     [self showContentWithArray:dataDic[@"content"]];
+    [self drawReminderWithString:dataDic[@"reminder"]];
 }
 
 - (void)showContentWithArray:(NSArray *)contentArray{
@@ -61,14 +62,14 @@
         //如果标题存在,标题的高度应该是上次图片的底部高度
         NSString *title = dic[@"title"];
         if (title != nil) {
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _previousImageBottom, kScreenWidth, 30)];
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, _previousImageBottom, kScreenWidth - 10, 30)];
             titleLabel.text = title;
             [self.mainScrollView addSubview:titleLabel];
             //下边详细信息label显示的时候，高度的坐标应该在title的bottom下再加20，也就是标题的高度减10；
             _previousImageBottom += 20;
         }
         CGFloat height = [HWTools getTextHeightWithText:dic[@"description"] bigestSize:CGSizeMake(kScreenWidth, 1000) textFont:15.0];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, _previousImageBottom + 10, kScreenWidth, height)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, _previousImageBottom + 10, kScreenWidth - 10, height)];
         label.text = dic[@"description"];
         label.numberOfLines = 0;
         label.font = [UIFont systemFontOfSize:15.0];
@@ -91,8 +92,34 @@
         }
         }
     }
-    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth, _previousImageBottom + 20);
+//    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth, _previousImageBottom + 20);
 }
+
+//温馨提示下面的东西
+- (void)drawReminderWithString:(NSString *)str{
+    
+    UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake(0, _previousImageBottom, kScreenWidth, 5)];
+    view.backgroundColor = [UIColor lightGrayColor];
+    [self.mainScrollView addSubview:view];
+    
+    UILabel *reminderTitle = [[UILabel alloc]initWithFrame:CGRectMake(38, _previousImageBottom + 5, kScreenWidth - 38, 25)];
+    reminderTitle.text = @"温馨提示";
+    [self.mainScrollView addSubview:reminderTitle];
+    
+    UIImageView *litleView = [[UIImageView alloc]initWithFrame:CGRectMake(0, _previousImageBottom + 30, kScreenWidth, 0.5)];
+    litleView.backgroundColor = [UIColor lightGrayColor];
+    [self.mainScrollView addSubview:litleView];
+    
+    CGFloat reminderHeight = [HWTools getTextHeightWithText:str bigestSize:CGSizeMake(kScreenWidth, 1000) textFont:15.0];
+    UILabel *reminder = [[UILabel alloc]initWithFrame:CGRectMake(10, _previousImageBottom + 31, kScreenWidth - 20, reminderHeight)];
+    reminder.text = str;
+    reminder.font = [UIFont systemFontOfSize:15.0];
+    reminder.numberOfLines = 0;
+    _previousImageBottom = reminder.bottom;
+    [self.mainScrollView addSubview:reminder];
+    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth, _previousImageBottom + 30);
+}
+
 
 - (void)awakeFromNib{
    self.mainScrollView.contentSize = CGSizeMake(kScreenWidth, 1000);

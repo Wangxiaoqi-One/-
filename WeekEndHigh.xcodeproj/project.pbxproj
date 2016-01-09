@@ -19,6 +19,9 @@
 		7A0E37471C3A50E200193018 /* DiscoverStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37461C3A50E200193018 /* DiscoverStoryboard.storyboard */; };
 		7A0E37571C3A767000193018 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0E37551C3A767000193018 /* MainTableViewCell.m */; };
 		7A0E37581C3A767000193018 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E37561C3A767000193018 /* MainTableViewCell.xib */; };
+		7A1DA7331C40EAF7000B37FC /* HotThemeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA7311C40EAF7000B37FC /* HotThemeTableViewCell.m */; };
+		7A1DA7341C40EAF7000B37FC /* HotThemeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DA7321C40EAF7000B37FC /* HotThemeTableViewCell.xib */; };
+		7A1DA7361C40F054000B37FC /* hotTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DA7351C40F054000B37FC /* hotTheme.plist */; };
 		7A2DB0751C3CBC1900FC1CB3 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0741C3CBC1900FC1CB3 /* SelectCityViewController.m */; };
 		7A2DB0781C3CBDA600FC1CB3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0771C3CBDA600FC1CB3 /* SearchViewController.m */; };
 		7A2DB07B1C3CBF5400FC1CB3 /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB07A1C3CBF5400FC1CB3 /* ActivityDetailViewController.m */; };
@@ -65,6 +68,10 @@
 		7A0E37541C3A767000193018 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		7A0E37551C3A767000193018 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		7A0E37561C3A767000193018 /* MainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		7A1DA7301C40EAF7000B37FC /* HotThemeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotThemeTableViewCell.h; sourceTree = "<group>"; };
+		7A1DA7311C40EAF7000B37FC /* HotThemeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotThemeTableViewCell.m; sourceTree = "<group>"; };
+		7A1DA7321C40EAF7000B37FC /* HotThemeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotThemeTableViewCell.xib; sourceTree = "<group>"; };
+		7A1DA7351C40F054000B37FC /* hotTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hotTheme.plist; sourceTree = "<group>"; };
 		7A2DB0711C3CAE1C00FC1CB3 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		7A2DB0721C3CB30D00FC1CB3 /* WHdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHdefine.h; sourceTree = "<group>"; };
 		7A2DB0731C3CBC1900FC1CB3 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
@@ -239,6 +246,7 @@
 				7A6513091C3BA0E3000A02A5 /* MainModel.m */,
 				7AD124661C3FBE5900FDD064 /* GoodActivityModel.h */,
 				7AD124671C3FBE5900FDD064 /* GoodActivityModel.m */,
+				7A1DA7351C40F054000B37FC /* hotTheme.plist */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -269,6 +277,9 @@
 		7A0E37361C3A4E2A00193018 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A1DA7301C40EAF7000B37FC /* HotThemeTableViewCell.h */,
+				7A1DA7311C40EAF7000B37FC /* HotThemeTableViewCell.m */,
+				7A1DA7321C40EAF7000B37FC /* HotThemeTableViewCell.xib */,
 				7AE96A901C3E112700F5163A /* ActivityDetailView.h */,
 				7AE96A911C3E112700F5163A /* ActivityDetailView.m */,
 				7A0E37421C3A507E00193018 /* MainStoryboard.storyboard */,
@@ -434,11 +445,13 @@
 				7A65130C1C3BA74A000A02A5 /* File.plist in Resources */,
 				7AD1245B1C3F9E0F00FDD064 /* blueArrowDown.png in Resources */,
 				7A0E37431C3A507E00193018 /* MainStoryboard.storyboard in Resources */,
+				7A1DA7361C40F054000B37FC /* hotTheme.plist in Resources */,
 				7AD124651C3FBBF000FDD064 /* cacaca.plist in Resources */,
 				7A0E36DE1C3A1C7600193018 /* Assets.xcassets in Resources */,
 				7AD124611C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib in Resources */,
 				7A0E37451C3A50A000193018 /* MineStoryboard.storyboard in Resources */,
 				7AD1245A1C3F9E0F00FDD064 /* blueArrow.png in Resources */,
+				7A1DA7341C40EAF7000B37FC /* HotThemeTableViewCell.xib in Resources */,
 				7AE96A971C3E540900F5163A /* activityDetail.plist in Resources */,
 				7A0E36E11C3A1C7600193018 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -515,6 +528,7 @@
 				7A0E36D91C3A1C7600193018 /* main.m in Sources */,
 				7AD1245C1C3F9E0F00FDD064 /* PullingRefreshTableView.m in Sources */,
 				7AE96A921C3E112700F5163A /* ActivityDetailView.m in Sources */,
+				7A1DA7331C40EAF7000B37FC /* HotThemeTableViewCell.m in Sources */,
 				7A2DB0811C3CC00100FC1CB3 /* ClasssifyViewController.m in Sources */,
 				7A2DB0751C3CBC1900FC1CB3 /* SelectCityViewController.m in Sources */,
 				7A0E373E1C3A4E2A00193018 /* MainViewController.m in Sources */,
