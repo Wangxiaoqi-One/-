@@ -17,12 +17,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUN-ia-y0S">
                         <rect key="frame" x="8" y="8" width="75" height="75"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84X-3P-gVo">
-                        <rect key="frame" x="91" y="62" width="118" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oN-Pd-wHh">
                         <rect key="frame" x="273" y="8" width="92" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -36,9 +30,6 @@
                             <color key="titleColor" red="1" green="0.30896598870000003" blue="0.23103541950000001" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z8q-hG-Qr6">
-                        <rect key="frame" x="91" y="29" width="62" height="25"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld6-Kl-jyq">
                         <rect key="frame" x="91" y="8" width="174" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -46,9 +37,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zog-5e-WLa">
-                        <rect key="frame" x="91" y="29" width="62" height="25"/>
+                        <rect key="frame" x="91" y="37" width="62" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84X-3P-gVo">
+                        <rect key="frame" x="91" y="62" width="118" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.30896598870000003" blue="0.23103541950000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -57,7 +54,6 @@
                 <outlet property="activityDistanceLabel" destination="4oN-Pd-wHh" id="vAy-Ji-oFG"/>
                 <outlet property="activityPriceLabel" destination="84X-3P-gVo" id="K1B-GL-d5R"/>
                 <outlet property="activityTitleLabel" destination="Ld6-Kl-jyq" id="qTc-0H-PCM"/>
-                <outlet property="ageBgImageView" destination="Z8q-hG-Qr6" id="fh0-ie-QEV"/>
                 <outlet property="ageLabel" destination="zog-5e-WLa" id="Qg2-j1-m1m"/>
                 <outlet property="headImageView" destination="YUN-ia-y0S" id="XXi-AS-qfI"/>
                 <outlet property="loveCountButton" destination="u9f-bb-yeU" id="Ny7-bj-sWE"/>

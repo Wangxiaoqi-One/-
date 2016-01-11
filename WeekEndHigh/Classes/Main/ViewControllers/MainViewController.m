@@ -238,6 +238,7 @@
 
 -(void)mainActivityButtonAction:(UIButton *)btn{
     ClasssifyViewController *classifyVC = [[ClasssifyViewController alloc] init];
+    classifyVC.classifyListType = btn.tag - 100 + 1;
     [self.navigationController pushViewController:classifyVC animated:YES];
 }
 
@@ -365,6 +366,8 @@
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
         //活动ID
         ActivityDetailViewController *activityVC = [mainStoryBoard instantiateViewControllerWithIdentifier:@"activityDetailId"];
+        
+        NSLog(@"%@",self.adArray[addButton.tag - 100]);
         activityVC.activityId = self.adArray[addButton.tag - 100][@"id"];
         [self.navigationController pushViewController:activityVC animated:YES];
     }else{

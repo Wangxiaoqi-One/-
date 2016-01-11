@@ -76,6 +76,7 @@
 //tableView上拉加载开始的时候使用
 - (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView{
     _pageCount += 1;
+    self.refreshing = NO;
     [self performSelector:@selector(loadData) withObject:nil afterDelay:1.f];
 }
 
@@ -89,11 +90,18 @@
         NSInteger code = [dic[@"code"] integerValue];
         if ([status isEqualToString:@"success"] && code == 0) {
             NSDictionary *dict = dic[@"success"];
+            
+            if (self.refreshing) {
+                if (self.acArray.count > 0) {
+                    [self.acArray removeAllObjects];
+                }
+            }
             NSArray *array = dict[@"acData"];
             for (NSDictionary *dictn in array) {
                 GoodActivityModel *goodModel = [[GoodActivityModel alloc] initWithDictionary:dictn];
                 [self.acArray addObject:goodModel];
             }
+            //刷新tableView，他会重新执行tableView的所有代理方法
             [self.tableView reloadData];
         }else{
         

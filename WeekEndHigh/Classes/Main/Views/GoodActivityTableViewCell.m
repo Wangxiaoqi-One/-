@@ -20,8 +20,6 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *loveCountButton;
 
-@property (strong, nonatomic) IBOutlet UIImageView *ageBgImageView;
-
 @property (strong, nonatomic) IBOutlet UILabel *ageLabel;
 
 @end

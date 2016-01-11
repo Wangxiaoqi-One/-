@@ -20,6 +20,4 @@
 
 + (CGFloat)getTextHeightWithText:(NSString *)text bigestSize:(CGSize)bigSize textFont:(CGFloat)font;
 
-
-
 @end

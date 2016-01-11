@@ -9,6 +9,16 @@
 #ifndef WHdefine_h
 #define WHdefine_h
 
+#import <Foundation/Foundation.h>
+
+typedef NS_ENUM(NSInteger, ClassifyType){
+    ClassifyTypeShowRepertorie = 1, //演出剧目
+    ClassifyTypeTouristPlace,       //景点场馆
+    ClassifyTypeStudyPUZ,           //学习益智
+    ClassifyTypeFamilyTravel        //亲子旅游
+};
+
+
 //首页数据接口
 #define kMainDataList @"http://e.kumi.cn/app/v1.3/index.php?_s_=02a411494fa910f5177d82a6b0a63788&_t_=1451307342&channelid=appstore&cityid=1&lat=34.62172291944134&limit=30&lng=112.4149512442411&page=1"
 
@@ -24,6 +34,9 @@
 
 //热门专题
 #define kHotTheme @"http://e.kumi.cn/app/positionlist.php?_s_=e2b71c66789428d5385b06c178a88db2&_t_=1452237051&channelid=appstore&cityid=1&lat=34.61351314785497&limit=30&lng=112.4140755658942&page=%ld"
+
+//分类列表
+#define kClassifyList @"http://e.kumi.cn/app/v1.3/catelist.php?_s_=dad924a9b9cd534b53fc2c521e9f8e84&_t_=1452495193&channelid=appstore&cityid=1&lat=34.61356398594803&limit=30&lng=112.4140434532402&page=%@&typeid=%@"
 
 #endif /* WHdefine_h */
 

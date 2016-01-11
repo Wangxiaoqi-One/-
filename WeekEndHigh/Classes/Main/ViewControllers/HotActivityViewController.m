@@ -46,7 +46,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HotThemeTableViewCell *hotCell = [tableView dequeueReusableCellWithIdentifier:@"hotCell" forIndexPath:indexPath];
+    HotThemeTableViewCell *hotCell = [self.tableView dequeueReusableCellWithIdentifier:@"hotCell" forIndexPath:indexPath];
     hotCell.dataDic = self.rcArray[indexPath.row];
     return hotCell;
 }
@@ -72,6 +72,7 @@
 //tableView上拉加载开始的时候使用
 - (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView{
     _pageCount += 1;
+    self.refreshing = NO;
     [self performSelector:@selector(loadData) withObject:nil afterDelay:1.f];
 }
 
@@ -86,6 +87,11 @@
         if ([status isEqualToString:@"success"] && code == 0) {
             NSDictionary *dict = dic[@"success"];
             NSArray *array = dict[@"rcData"];
+            if (self.refreshing) {
+                if (self.rcArray.count > 0) {
+                    [self.rcArray removeAllObjects];
+                }
+            }
             for (NSDictionary *dictn in array) {
                 [self.rcArray addObject:dictn];
             }
