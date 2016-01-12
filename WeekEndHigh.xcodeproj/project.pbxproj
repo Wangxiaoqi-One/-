@@ -48,6 +48,12 @@
 		7AD124611C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD1245F1C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib */; };
 		7AD124651C3FBBF000FDD064 /* cacaca.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AD124641C3FBBF000FDD064 /* cacaca.plist */; };
 		7AD124681C3FBE5900FDD064 /* GoodActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD124671C3FBE5900FDD064 /* GoodActivityModel.m */; };
+		7AD3FA341C449F4F009D4E7F /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3FA311C449F4F009D4E7F /* ProgressHUD.bundle */; };
+		7AD3FA351C449F4F009D4E7F /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3FA331C449F4F009D4E7F /* ProgressHUD.m */; };
+		7AD3FA391C44FAC3009D4E7F /* DiscoverTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3FA371C44FAC3009D4E7F /* DiscoverTableViewCell.m */; };
+		7AD3FA3A1C44FAC3009D4E7F /* DiscoverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3FA381C44FAC3009D4E7F /* DiscoverTableViewCell.xib */; };
+		7AD3FA6D1C450E9A009D4E7F /* DiscoverFile.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AD3FA6C1C450E9A009D4E7F /* DiscoverFile.plist */; };
+		7AD3FA701C451297009D4E7F /* DiscoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3FA6F1C451297009D4E7F /* DiscoverModel.m */; };
 		7AE96A921C3E112700F5163A /* ActivityDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE96A911C3E112700F5163A /* ActivityDetailView.m */; };
 		7AE96A951C3E4C4500F5163A /* HWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE96A941C3E4C4500F5163A /* HWTools.m */; };
 		7AE96A971C3E540900F5163A /* activityDetail.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AE96A961C3E540900F5163A /* activityDetail.plist */; };
@@ -125,6 +131,15 @@
 		7AD124641C3FBBF000FDD064 /* cacaca.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cacaca.plist; sourceTree = "<group>"; };
 		7AD124661C3FBE5900FDD064 /* GoodActivityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodActivityModel.h; sourceTree = "<group>"; };
 		7AD124671C3FBE5900FDD064 /* GoodActivityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodActivityModel.m; sourceTree = "<group>"; };
+		7AD3FA311C449F4F009D4E7F /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		7AD3FA321C449F4F009D4E7F /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		7AD3FA331C449F4F009D4E7F /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		7AD3FA361C44FAC3009D4E7F /* DiscoverTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewCell.h; sourceTree = "<group>"; };
+		7AD3FA371C44FAC3009D4E7F /* DiscoverTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewCell.m; sourceTree = "<group>"; };
+		7AD3FA381C44FAC3009D4E7F /* DiscoverTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoverTableViewCell.xib; sourceTree = "<group>"; };
+		7AD3FA6C1C450E9A009D4E7F /* DiscoverFile.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DiscoverFile.plist; sourceTree = "<group>"; };
+		7AD3FA6E1C451297009D4E7F /* DiscoverModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverModel.h; sourceTree = "<group>"; };
+		7AD3FA6F1C451297009D4E7F /* DiscoverModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverModel.m; sourceTree = "<group>"; };
 		7AE96A901C3E112700F5163A /* ActivityDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailView.h; sourceTree = "<group>"; };
 		7AE96A911C3E112700F5163A /* ActivityDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailView.m; sourceTree = "<group>"; };
 		7AE96A931C3E4C4500F5163A /* HWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWTools.h; sourceTree = "<group>"; };
@@ -226,6 +241,9 @@
 		7A0E372C1C3A4E2A00193018 /* Modeles */ = {
 			isa = PBXGroup;
 			children = (
+				7AD3FA6C1C450E9A009D4E7F /* DiscoverFile.plist */,
+				7AD3FA6E1C451297009D4E7F /* DiscoverModel.h */,
+				7AD3FA6F1C451297009D4E7F /* DiscoverModel.m */,
 			);
 			path = Modeles;
 			sourceTree = "<group>";
@@ -243,6 +261,9 @@
 			isa = PBXGroup;
 			children = (
 				7A0E37461C3A50E200193018 /* DiscoverStoryboard.storyboard */,
+				7AD3FA361C44FAC3009D4E7F /* DiscoverTableViewCell.h */,
+				7AD3FA371C44FAC3009D4E7F /* DiscoverTableViewCell.m */,
+				7AD3FA381C44FAC3009D4E7F /* DiscoverTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -359,6 +380,7 @@
 		7A0E37401C3A4E3200193018 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7AD3FA301C449F4F009D4E7F /* ProgressHUD */,
 				7ACBB23E1C438FDF0016D1B7 /* VOSegmentedControl */,
 				7AD124551C3F9E0F00FDD064 /* PullingRefreshTableView */,
 				7A2DB0701C3CAE1C00FC1CB3 /* HWBtools */,
@@ -412,6 +434,16 @@
 				7AD124591C3F9E0F00FDD064 /* PullingRefreshTableView.m */,
 			);
 			path = PullingRefreshTableView;
+			sourceTree = "<group>";
+		};
+		7AD3FA301C449F4F009D4E7F /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				7AD3FA311C449F4F009D4E7F /* ProgressHUD.bundle */,
+				7AD3FA321C449F4F009D4E7F /* ProgressHUD.h */,
+				7AD3FA331C449F4F009D4E7F /* ProgressHUD.m */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		88E53C595B7FCE169CAAFEA3 /* Frameworks */ = {
@@ -484,6 +516,7 @@
 			files = (
 				7A0E37581C3A767000193018 /* MainTableViewCell.xib in Resources */,
 				7AFFFEBE1C3F5D4B0067BA36 /* Activitytheme.plist in Resources */,
+				7AD3FA341C449F4F009D4E7F /* ProgressHUD.bundle in Resources */,
 				7A0E37471C3A50E200193018 /* DiscoverStoryboard.storyboard in Resources */,
 				7A65130C1C3BA74A000A02A5 /* File.plist in Resources */,
 				7AD1245B1C3F9E0F00FDD064 /* blueArrowDown.png in Resources */,
@@ -492,7 +525,9 @@
 				7A1DA7361C40F054000B37FC /* hotTheme.plist in Resources */,
 				7AD124651C3FBBF000FDD064 /* cacaca.plist in Resources */,
 				7A0E36DE1C3A1C7600193018 /* Assets.xcassets in Resources */,
+				7AD3FA6D1C450E9A009D4E7F /* DiscoverFile.plist in Resources */,
 				7AD124611C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib in Resources */,
+				7AD3FA3A1C44FAC3009D4E7F /* DiscoverTableViewCell.xib in Resources */,
 				7ACBB23D1C4384BB0016D1B7 /* ClassSify.plist in Resources */,
 				7ACBB24E1C43A8080016D1B7 /* typeud21.plist in Resources */,
 				7A0E37451C3A50A000193018 /* MineStoryboard.storyboard in Resources */,
@@ -570,8 +605,11 @@
 				7A2DB07B1C3CBF5400FC1CB3 /* ActivityDetailViewController.m in Sources */,
 				7A2DB0781C3CBDA600FC1CB3 /* SearchViewController.m in Sources */,
 				7AD124681C3FBE5900FDD064 /* GoodActivityModel.m in Sources */,
+				7AD3FA701C451297009D4E7F /* DiscoverModel.m in Sources */,
+				7AD3FA351C449F4F009D4E7F /* ProgressHUD.m in Sources */,
 				7AE96A9A1C3E5B2300F5163A /* UIView+UIViewExtension.m in Sources */,
 				7A2DB07E1C3CBF6700FC1CB3 /* ThemeViewController.m in Sources */,
+				7AD3FA391C44FAC3009D4E7F /* DiscoverTableViewCell.m in Sources */,
 				7ACBB2491C438FDF0016D1B7 /* VOSegment.m in Sources */,
 				7AFFFEC11C3F5F070067BA36 /* ActivityThemeView.m in Sources */,
 				7A0E36D91C3A1C7600193018 /* main.m in Sources */,

@@ -8,7 +8,6 @@
 
 #import "ActivityDetailViewController.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
-#import <MBProgressHUD/MBProgressHUD.h>
 #import "ActivityDetailView.h"
 
 @interface ActivityDetailViewController ()
@@ -42,12 +41,10 @@
 - (void)getModel{
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [sessionManager GET:[NSString stringWithFormat:kActicityDetail, _activityId] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        WXQLog(@"%lld", downloadProgress.totalUnitCount);
+//        WXQLog(@"%lld", downloadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //        WXQLog(@"%@", responseObject);
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         NSDictionary *dic= responseObject;
         NSString *status = dic[@"status"];
@@ -61,7 +58,6 @@
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
         WXQLog(@"%@", error);
     }];
 }

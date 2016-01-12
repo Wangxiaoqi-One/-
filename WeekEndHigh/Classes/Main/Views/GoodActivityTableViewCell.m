@@ -28,6 +28,8 @@
 
 - (void)setGoodModel:(GoodActivityModel *)goodModel{
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:goodModel.image] placeholderImage:nil];
+    self.headImageView.layer.cornerRadius = 10;
+    self.headImageView.clipsToBounds = YES;
     self.activityTitleLabel.text = goodModel.title;
     self.ageLabel.text = goodModel.age;
     self.activityPriceLabel.text = goodModel.price;

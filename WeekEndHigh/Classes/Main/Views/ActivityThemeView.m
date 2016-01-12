@@ -40,7 +40,7 @@
     [self.headImageView sd_setImageWithURL:[NSURL URLWithString:dataDic[@"image"]] placeholderImage:nil];
     //活动详情
     _previousImageBottom = 186;
-    [self showContentWithArray:dataDic[@"content"]];
+        [self showContentWithArray:dataDic[@"content"]];
 }
 
 - (void)showContentWithArray:(NSArray *)contentArray{
