@@ -14,5 +14,9 @@
 
 @property (nonatomic, strong) UITabBarController *tabBarVC;
 
+@property (nonatomic, strong) NSString *wbtoken;
+@property (nonatomic, strong) NSString *wbRefreshToken;
+@property (nonatomic, strong) NSString *wbCurrentUserId;
+
 @end
 

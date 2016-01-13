@@ -28,6 +28,7 @@
     // Initialization code
     self.headImageView.layer.cornerRadius = 45;
     self.headImageView.clipsToBounds = YES;
+    self.titlelabel.numberOfLines = 0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
