@@ -11,8 +11,12 @@
 #import <MessageUI/MessageUI.h>
 #import "ProgressHUD.h"
 #import "WeiboSDK.h"
+#import "AppDelegate.h"
+#import "WXApi.h"
+#import "ShareView.h"
 
-@interface MineViewController ()<UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
+
+@interface MineViewController ()<UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate, WXApiDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIButton *headImageButton;
@@ -22,6 +26,8 @@
 @property (nonatomic, strong) NSArray *imageArray;
 
 @property (nonatomic, strong) UILabel *nikeNameLabel;
+@property (nonatomic, strong) ShareView *shareView;
+@property (nonatomic, strong) UIView *blackView;
 
 @end
 
@@ -170,80 +176,11 @@
 }
 
 - (void)share{
-    UIWindow *window = [[UIApplication sharedApplication].delegate window];
-    UIView *shareView = [[UIView alloc] initWithFrame:CGRectMake(30, kScreenHeight - 350, kScreenWidth - 60, 300)];
-    shareView.backgroundColor = MainColor;
-    [window addSubview:shareView];
-    
-    //weibo
-    UIButton *weiboBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    weiboBtn.frame = CGRectMake(30, 40, 70, 70);
-    [weiboBtn setImage:[UIImage imageNamed:@"ic_com_sina_weibo_sdk_logo"] forState:UIControlStateNormal];
-    [weiboBtn addTarget:self action:@selector(weiboShare) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:weiboBtn];
-    
-    //朋友圈
-    UIButton *friendsBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    friendsBtn.frame = CGRectMake(120, 40, 70, 70);
-    [friendsBtn setImage:[UIImage imageNamed:@"icon_weixin"] forState:UIControlStateNormal];
-    [friendsBtn addTarget:self action:@selector(friendsShare) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:friendsBtn];
-    
-    //friend
-    UIButton *friendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    friendBtn.frame = CGRectMake(210, 40, 70, 70);
-    [friendBtn setImage:[UIImage imageNamed:@"icon_weixin"] forState:UIControlStateNormal];
-    [friendsBtn addTarget:self action:@selector(friendShare) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:friendBtn];
-    
-    
-    //remove
-    
-    UIButton *removeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    removeBtn.frame = CGRectMake(120, 130, 70, 70);
-    [removeBtn setTitle:@"取消" forState:UIControlStateNormal];
-    [removeBtn addTarget:self action:@selector(removeShareView:) forControlEvents:UIControlEventTouchUpInside];
-    [shareView addSubview:removeBtn];
-    [UIView animateWithDuration:1.0 animations:^{
-        
-    }];
-}
-
-//微博分享
-- (void)weiboShare{
-    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
-    request.redirectURI = kRedirectURI;
-    request.scope = @"all";
-    request.userInfo = @{@"SS0_From":@"MineViewController"};
-    [WeiboSDK sendRequest:request];
-    
-}
-
-- (WBMessageObject *)messageToShare{
-    WBMessageObject *message = [WBMessageObject message];
-    message.text = @"微博分享";
-    return message;
+    self.shareView = [[ShareView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
 }
 
 
-//微信朋友分享
 
-- (void)friendShare{
-
-}
-
-//微信朋友圈分享
-
-- (void)friendsShare{
-    
-}
-
-
-//取消按钮
-- (void)removeShareView:(UIButton *)btn{
-    UIView *view = [btn superview];
-    [view removeFromSuperview];
-}
 
 #pragma mark ----------lazyLoading
 - (UITableView *)tableView{

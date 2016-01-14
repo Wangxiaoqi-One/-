@@ -35,6 +35,7 @@
 		7A1DA7331C40EAF7000B37FC /* HotThemeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1DA7311C40EAF7000B37FC /* HotThemeTableViewCell.m */; };
 		7A1DA7341C40EAF7000B37FC /* HotThemeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DA7321C40EAF7000B37FC /* HotThemeTableViewCell.xib */; };
 		7A1DA7361C40F054000B37FC /* hotTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A1DA7351C40F054000B37FC /* hotTheme.plist */; };
+		7A1F926A1C47202000B328C1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A1F92691C47202000B328C1 /* libsqlite3.0.tbd */; };
 		7A2DB0751C3CBC1900FC1CB3 /* SelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0741C3CBC1900FC1CB3 /* SelectCityViewController.m */; };
 		7A2DB0781C3CBDA600FC1CB3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0771C3CBDA600FC1CB3 /* SearchViewController.m */; };
 		7A2DB07B1C3CBF5400FC1CB3 /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB07A1C3CBF5400FC1CB3 /* ActivityDetailViewController.m */; };
@@ -46,6 +47,9 @@
 		7A37FEAD1C462BDE008E3CC7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A37FEAC1C462BDE008E3CC7 /* MessageUI.framework */; };
 		7A65130A1C3BA0E3000A02A5 /* MainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6513091C3BA0E3000A02A5 /* MainModel.m */; };
 		7A65130C1C3BA74A000A02A5 /* File.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A65130B1C3BA74A000A02A5 /* File.plist */; };
+		7A7E58431C47416100FCF5E8 /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E58421C47416100FCF5E8 /* ShareView.m */; };
+		7A7E58461C474E3000FCF5E8 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7E58451C474E3000FCF5E8 /* ShareViewController.m */; };
+		7A7E584B1C47884000FCF5E8 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7E58481C47884000FCF5E8 /* libWeChatSDK.a */; };
 		7ACBB23D1C4384BB0016D1B7 /* ClassSify.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ACBB23C1C4384BB0016D1B7 /* ClassSify.plist */; };
 		7ACBB2471C438FDF0016D1B7 /* VOContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACBB2401C438FDF0016D1B7 /* VOContentLayer.m */; };
 		7ACBB2481C438FDF0016D1B7 /* VOIndicatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACBB2421C438FDF0016D1B7 /* VOIndicatorAnimation.m */; };
@@ -124,6 +128,7 @@
 		7A1DA7311C40EAF7000B37FC /* HotThemeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotThemeTableViewCell.m; sourceTree = "<group>"; };
 		7A1DA7321C40EAF7000B37FC /* HotThemeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotThemeTableViewCell.xib; sourceTree = "<group>"; };
 		7A1DA7351C40F054000B37FC /* hotTheme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hotTheme.plist; sourceTree = "<group>"; };
+		7A1F92691C47202000B328C1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		7A2DB0711C3CAE1C00FC1CB3 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		7A2DB0721C3CB30D00FC1CB3 /* WHdefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHdefine.h; sourceTree = "<group>"; };
 		7A2DB0731C3CBC1900FC1CB3 /* SelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectCityViewController.h; sourceTree = "<group>"; };
@@ -146,6 +151,13 @@
 		7A6513081C3BA0E3000A02A5 /* MainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainModel.h; sourceTree = "<group>"; };
 		7A6513091C3BA0E3000A02A5 /* MainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainModel.m; sourceTree = "<group>"; };
 		7A65130B1C3BA74A000A02A5 /* File.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = File.plist; sourceTree = "<group>"; };
+		7A7E58411C47416100FCF5E8 /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
+		7A7E58421C47416100FCF5E8 /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
+		7A7E58441C474E3000FCF5E8 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		7A7E58451C474E3000FCF5E8 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		7A7E58481C47884000FCF5E8 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		7A7E58491C47884000FCF5E8 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		7A7E584A1C47884000FCF5E8 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		7ACBB23C1C4384BB0016D1B7 /* ClassSify.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClassSify.plist; sourceTree = "<group>"; };
 		7ACBB23F1C438FDF0016D1B7 /* VOContentLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOContentLayer.h; sourceTree = "<group>"; };
 		7ACBB2401C438FDF0016D1B7 /* VOContentLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOContentLayer.m; sourceTree = "<group>"; };
@@ -198,6 +210,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A7E584B1C47884000FCF5E8 /* libWeChatSDK.a in Frameworks */,
+				7A1F926A1C47202000B328C1 /* libsqlite3.0.tbd in Frameworks */,
 				7A0FC5AE1C4650EC007781E0 /* libsqlite3.tbd in Frameworks */,
 				7A0FC5AC1C4650E0007781E0 /* libz.tbd in Frameworks */,
 				7A0FC5AA1C4650D3007781E0 /* CoreGraphics.framework in Frameworks */,
@@ -424,6 +438,8 @@
 			isa = PBXGroup;
 			children = (
 				7A0E37441C3A50A000193018 /* MineStoryboard.storyboard */,
+				7A7E58411C47416100FCF5E8 /* ShareView.h */,
+				7A7E58421C47416100FCF5E8 /* ShareView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -431,6 +447,7 @@
 		7A0E37401C3A4E3200193018 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				7A7E58471C47884000FCF5E8 /* SDKExport */,
 				7A0FC58A1C464FEA007781E0 /* libWeiboSDK */,
 				7AD3FA301C449F4F009D4E7F /* ProgressHUD */,
 				7ACBB23E1C438FDF0016D1B7 /* VOSegmentedControl */,
@@ -477,8 +494,20 @@
 				7A2DB08D1C3D204000FC1CB3 /* UIViewController+Common.m */,
 				7A2DB0711C3CAE1C00FC1CB3 /* Prefix.pch */,
 				7A2DB0721C3CB30D00FC1CB3 /* WHdefine.h */,
+				7A7E58441C474E3000FCF5E8 /* ShareViewController.h */,
+				7A7E58451C474E3000FCF5E8 /* ShareViewController.m */,
 			);
 			path = HWBtools;
+			sourceTree = "<group>";
+		};
+		7A7E58471C47884000FCF5E8 /* SDKExport */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E58481C47884000FCF5E8 /* libWeChatSDK.a */,
+				7A7E58491C47884000FCF5E8 /* WXApi.h */,
+				7A7E584A1C47884000FCF5E8 /* WXApiObject.h */,
+			);
+			path = SDKExport;
 			sourceTree = "<group>";
 		};
 		7ACBB23E1C438FDF0016D1B7 /* VOSegmentedControl */ = {
@@ -520,6 +549,7 @@
 		88E53C595B7FCE169CAAFEA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A1F92691C47202000B328C1 /* libsqlite3.0.tbd */,
 				7A0FC5AD1C4650EC007781E0 /* libsqlite3.tbd */,
 				7A0FC5AB1C4650E0007781E0 /* libz.tbd */,
 				7A0FC5A91C4650D3007781E0 /* CoreGraphics.framework */,
@@ -681,6 +711,7 @@
 			files = (
 				7AE96A951C3E4C4500F5163A /* HWTools.m in Sources */,
 				7A0E37571C3A767000193018 /* MainTableViewCell.m in Sources */,
+				7A7E58461C474E3000FCF5E8 /* ShareViewController.m in Sources */,
 				7A2DB0871C3CC09B00FC1CB3 /* HotActivityViewController.m in Sources */,
 				7A0E36DC1C3A1C7600193018 /* AppDelegate.m in Sources */,
 				7A2DB0841C3CC08600FC1CB3 /* GoodActivityViewController.m in Sources */,
@@ -697,6 +728,7 @@
 				7ACBB2491C438FDF0016D1B7 /* VOSegment.m in Sources */,
 				7AFFFEC11C3F5F070067BA36 /* ActivityThemeView.m in Sources */,
 				7A0E36D91C3A1C7600193018 /* main.m in Sources */,
+				7A7E58431C47416100FCF5E8 /* ShareView.m in Sources */,
 				7AD1245C1C3F9E0F00FDD064 /* PullingRefreshTableView.m in Sources */,
 				7AE96A921C3E112700F5163A /* ActivityDetailView.m in Sources */,
 				7ACBB2471C438FDF0016D1B7 /* VOContentLayer.m in Sources */,
@@ -746,6 +778,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -789,6 +822,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -811,6 +845,9 @@
 			baseConfigurationReference = AA3584C167B7DA6959E3DC01 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/aaa/Desktop/周末去哪嗨/WeekEndHigh/WeekEndHigh/Library/HWBtools/Prefix.pch";
 				INFOPLIST_FILE = WeekEndHigh/Info.plist;
@@ -819,9 +856,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WeekEndHigh/Library/libWeiboSDK",
+					"$(PROJECT_DIR)/WeekEndHigh/Library/SDKExport",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mangoinc.WeekEndHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -830,6 +870,9 @@
 			baseConfigurationReference = B1378C31D94E6C005571E3D7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "/Users/aaa/Desktop/周末去哪嗨/WeekEndHigh/WeekEndHigh/Library/HWBtools/Prefix.pch";
 				INFOPLIST_FILE = WeekEndHigh/Info.plist;
@@ -838,9 +881,12 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WeekEndHigh/Library/libWeiboSDK",
+					"$(PROJECT_DIR)/WeekEndHigh/Library/SDKExport",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Mangoinc.WeekEndHigh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

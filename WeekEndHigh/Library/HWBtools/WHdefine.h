@@ -25,6 +25,11 @@ typedef NS_ENUM(NSInteger, ClassifyType){
 #define  kAppKey             @"938033428"
 #define  kRedirectURI        @"https://api.weibo.com/oauth2/default.html"
 #define  kAppSecret          @"21b0e9e51743acd9e4792fcfe757a96c"
+
+//微信分享
+#define kWXAppKey            @"wx50887583d75eb2cb"
+#define kWXAppSecret          @"45da40dd122d8bf5a1a85d887f4c84b3"
+
 //首页数据接口
 #define kMainDataList @"http://e.kumi.cn/app/v1.3/index.php?_s_=02a411494fa910f5177d82a6b0a63788&_t_=1451307342&channelid=appstore&cityid=1&lat=34.62172291944134&limit=30&lng=112.4149512442411&page=1"
 
