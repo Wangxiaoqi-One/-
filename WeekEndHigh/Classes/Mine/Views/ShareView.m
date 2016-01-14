@@ -122,19 +122,24 @@
 
 - (WBMessageObject *)messageToShare{
     WBMessageObject *message = [WBMessageObject message];
-    message.text = @"分享你喜欢的文章";
+//    message.text = @"分享你喜欢的文章";
     //    WBImageObject *image = [WBImageObject object];
     //    image.imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"" ofType:@"png"]];
     //    message.imageObject = image;
+    WBWebpageObject *page = [WBWebpageObject object];
+    page.objectID = @"identifier1";
+    page.title = @"分享网页标题";
+    page.description = @"这是分享的网页";
+    page.webpageUrl = @"http://weibo.com/u/1645851277?from=feed&loc=nickname&is_all=1";
+    message.mediaObject = page;
+    
     return message;
 }
 
 //微信朋友分享
 
 - (void)friendShare{
-//    SendAuthReq *authRequest = [[SendAuthReq alloc] init];
-//    authRequest.scope = @"all";
-//    authRequest.state = kWXAppSecret;
+    
     SendMessageToWXReq *request = [[SendMessageToWXReq alloc] init];
     request.text = @"这是测试发送的内容";
     request.bText = YES;
@@ -146,7 +151,21 @@
 //微信朋友圈分享
 
 - (void)friendsShare{
+    SendMessageToWXReq *request = [[SendMessageToWXReq alloc] init];
+    request.bText = NO;
+    request.scene = WXSceneTimeline;
+    WXImageObject *image = [WXImageObject object];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"micro_messenger" ofType:@"png"];
+    WXMediaMessage *message = [WXMediaMessage message];
+    [message setThumbImage:[UIImage imageNamed:@"micro_messenger.png"]];
+    image.imageData = [NSData dataWithContentsOfFile:filePath];
     
+    UIImage *image1 = [UIImage imageWithData:image.imageData];
+    image.imageData = UIImagePNGRepresentation(image1);
+    message.mediaObject = image;
+    request.message = message;
+    
+    [WXApi sendReq:request];
 }
 
 
