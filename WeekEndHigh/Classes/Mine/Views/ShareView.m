@@ -152,19 +152,9 @@
 
 - (void)friendsShare{
     SendMessageToWXReq *request = [[SendMessageToWXReq alloc] init];
-    request.bText = NO;
+    request.text = @"请输入你要分享的内容";
+    request.bText = YES;
     request.scene = WXSceneTimeline;
-    WXImageObject *image = [WXImageObject object];
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"micro_messenger" ofType:@"png"];
-    WXMediaMessage *message = [WXMediaMessage message];
-    [message setThumbImage:[UIImage imageNamed:@"micro_messenger.png"]];
-    image.imageData = [NSData dataWithContentsOfFile:filePath];
-    
-    UIImage *image1 = [UIImage imageWithData:image.imageData];
-    image.imageData = UIImagePNGRepresentation(image1);
-    message.mediaObject = image;
-    request.message = message;
-    
     [WXApi sendReq:request];
 }
 
