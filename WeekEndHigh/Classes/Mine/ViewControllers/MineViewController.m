@@ -123,7 +123,9 @@
 }
 
 - (void)loginRegister{
-
+    UIStoryboard *login = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    UINavigationController *nav = [login instantiateViewControllerWithIdentifier:@"loginNav"];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)sendEmail{

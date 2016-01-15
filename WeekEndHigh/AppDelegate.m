@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "WeiboSDK.h"
 #import "WXApi.h"
+#import <BmobSDK/Bmob.h>
 
 @interface AppDelegate ()<WeiboSDKDelegate, WXApiDelegate>
 
@@ -27,6 +28,9 @@
     
     //微信
     [WXApi registerApp:kWXAppKey];
+    
+    //注册Bmob
+    [Bmob registerWithAppKey:kBmobKey];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
