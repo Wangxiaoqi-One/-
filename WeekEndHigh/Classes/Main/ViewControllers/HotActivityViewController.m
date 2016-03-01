@@ -32,7 +32,7 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"热门专题";
     self.tabBarController.tabBar.hidden = YES;
-    [self showBackButton];
+    [self showBackButton:@"back"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"HotThemeTableViewCell" bundle:nil] forCellReuseIdentifier:@"hotCell"];
     [self.view addSubview:self.tableView];

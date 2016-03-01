@@ -133,10 +133,10 @@
     //从CLLocation中取出坐标
     //CLLocationCoordinate2D 坐标系 里边包含经度和纬度
     CLLocationCoordinate2D coordinate = location.coordinate;
-//    NSLog(@"纬度:%f 经度:%f 海拔:%f 航向:%f 行走速度:%f", coordinate.latitude, coordinate.longitude, location.altitude, location.course, location.speed);
+    NSLog(@"纬度:%f 经度:%f 海拔:%f 航向:%f 行走速度:%f", coordinate.latitude, coordinate.longitude, location.altitude, location.course, location.speed);
     [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         CLPlacemark *placeMark = [placemarks firstObject];
-//        NSLog(@"%@", placeMark.addressDictionary);
+        NSLog(@"%@", placeMark.addressDictionary);
     }];
     [manager stopUpdatingLocation];
 }

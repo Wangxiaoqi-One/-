@@ -42,7 +42,7 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"分类列表";
     self.tabBarController.tabBar.hidden = YES;
-    [self showBackButton];
+    [self showBackButton:@"back"];
     
     [self.view addSubview:self.segmentControl];
     [self.view addSubview:self.tableView];

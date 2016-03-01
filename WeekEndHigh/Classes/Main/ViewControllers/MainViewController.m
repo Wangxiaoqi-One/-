@@ -51,7 +51,16 @@
     
 //    self.automaticallyAdjustsScrollViewInsets = NO;
     //left
-    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"北京" style:UIBarButtonItemStylePlain target:self action:@selector(selectCityAction:)];
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.frame = CGRectMake(0, 0, 60, 44);
+    [leftBtn setTitle:@"北京" forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:@"btn_chengshi.png"] forState:UIControlStateNormal];
+//    调整button图片的位置
+    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 40, 0, -20);
+    //    调整button标题所在的位置，距离Btn顶部，左边，下边，右边的
+    leftBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0);
+    [leftBtn addTarget:self action:@selector(selectCityAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     leftBarBtn.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarBtn;
     

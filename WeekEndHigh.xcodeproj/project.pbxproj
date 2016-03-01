@@ -44,6 +44,8 @@
 		7A2DB0841C3CC08600FC1CB3 /* GoodActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0831C3CC08600FC1CB3 /* GoodActivityViewController.m */; };
 		7A2DB0871C3CC09B00FC1CB3 /* HotActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB0861C3CC09B00FC1CB3 /* HotActivityViewController.m */; };
 		7A2DB08E1C3D204000FC1CB3 /* UIViewController+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2DB08D1C3D204000FC1CB3 /* UIViewController+Common.m */; };
+		7A30FE951C85908A00D13F06 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A30FE931C85908A00D13F06 /* HeaderView.m */; };
+		7A30FE961C85908A00D13F06 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A30FE941C85908A00D13F06 /* HeaderView.xib */; };
 		7A37FEAD1C462BDE008E3CC7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A37FEAC1C462BDE008E3CC7 /* MessageUI.framework */; };
 		7A47E67F1C48E91B006A1E2F /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A47E67E1C48E91B006A1E2F /* BmobSDK.framework */; };
 		7A47E6811C48E972006A1E2F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A47E6801C48E972006A1E2F /* CoreLocation.framework */; };
@@ -157,6 +159,9 @@
 		7A2DB0861C3CC09B00FC1CB3 /* HotActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotActivityViewController.m; sourceTree = "<group>"; };
 		7A2DB08C1C3D204000FC1CB3 /* UIViewController+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Common.h"; sourceTree = "<group>"; };
 		7A2DB08D1C3D204000FC1CB3 /* UIViewController+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Common.m"; sourceTree = "<group>"; };
+		7A30FE921C85908A00D13F06 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		7A30FE931C85908A00D13F06 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		7A30FE941C85908A00D13F06 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		7A37FEAC1C462BDE008E3CC7 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7A47E67E1C48E91B006A1E2F /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BmobSDK.framework; sourceTree = "<group>"; };
 		7A47E6801C48E972006A1E2F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -401,9 +406,9 @@
 				7A2DB0741C3CBC1900FC1CB3 /* SelectCityViewController.m */,
 				7A0E37341C3A4E2A00193018 /* MainViewController.h */,
 				7A0E37351C3A4E2A00193018 /* MainViewController.m */,
-				7A2DB0821C3CC08600FC1CB3 /* GoodActivityViewController.h */,
 				7A2DB0831C3CC08600FC1CB3 /* GoodActivityViewController.m */,
 				7A2DB0851C3CC09B00FC1CB3 /* HotActivityViewController.h */,
+				7A2DB0821C3CC08600FC1CB3 /* GoodActivityViewController.h */,
 				7A2DB0861C3CC09B00FC1CB3 /* HotActivityViewController.m */,
 				7A2DB07F1C3CC00100FC1CB3 /* ClasssifyViewController.h */,
 				7A2DB0801C3CC00100FC1CB3 /* ClasssifyViewController.m */,
@@ -434,6 +439,9 @@
 				7AD1245D1C3FA3AF00FDD064 /* GoodActivityTableViewCell.h */,
 				7AD1245E1C3FA3AF00FDD064 /* GoodActivityTableViewCell.m */,
 				7AD1245F1C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib */,
+				7A30FE921C85908A00D13F06 /* HeaderView.h */,
+				7A30FE931C85908A00D13F06 /* HeaderView.m */,
+				7A30FE941C85908A00D13F06 /* HeaderView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -712,6 +720,7 @@
 				7AD124651C3FBBF000FDD064 /* cacaca.plist in Resources */,
 				7A0E36DE1C3A1C7600193018 /* Assets.xcassets in Resources */,
 				7AD3FA6D1C450E9A009D4E7F /* DiscoverFile.plist in Resources */,
+				7A30FE961C85908A00D13F06 /* HeaderView.xib in Resources */,
 				7AD124611C3FA3AF00FDD064 /* GoodActivityTableViewCell.xib in Resources */,
 				7AD3FA3A1C44FAC3009D4E7F /* DiscoverTableViewCell.xib in Resources */,
 				7ACBB23D1C4384BB0016D1B7 /* ClassSify.plist in Resources */,
@@ -807,6 +816,7 @@
 				7AE96A921C3E112700F5163A /* ActivityDetailView.m in Sources */,
 				7ACBB2471C438FDF0016D1B7 /* VOContentLayer.m in Sources */,
 				7A1DA7331C40EAF7000B37FC /* HotThemeTableViewCell.m in Sources */,
+				7A30FE951C85908A00D13F06 /* HeaderView.m in Sources */,
 				7A2DB0811C3CC00100FC1CB3 /* ClasssifyViewController.m in Sources */,
 				7A2DB0751C3CBC1900FC1CB3 /* SelectCityViewController.m in Sources */,
 				7A0E373E1C3A4E2A00193018 /* MainViewController.m in Sources */,

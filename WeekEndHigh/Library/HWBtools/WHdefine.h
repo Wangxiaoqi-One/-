@@ -55,6 +55,9 @@ typedef NS_ENUM(NSInteger, ClassifyType){
 //发现
 #define kDiscover @"http://e.kumi.cn/app/found.php?_s_=a82c7d49216aedb18c04a20fd9b0d5b2&_t_=1451310230&channelid=appstore&cityid=1&lat=34.62172291944134&lng=112.4149512442411"
 
+//选择城市
+#define kCity @"http://e.kumi.cn/app/citylist.php"
+
 #endif /* WHdefine_h */
 
 

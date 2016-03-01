@@ -10,6 +10,5 @@
 
 @interface UIViewController (Common)
 
-- (void)showBackButton;
-
+- (void)showBackButton:(NSString *)imageName;
 @end

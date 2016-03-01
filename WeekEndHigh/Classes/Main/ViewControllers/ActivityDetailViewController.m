@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"活动详情";
-    [self showBackButton];
+    [self showBackButton:@"back"];
     //在第二级页面隐藏tabBar。
     self.tabBarController.tabBar.hidden = YES;
     //去地图页面

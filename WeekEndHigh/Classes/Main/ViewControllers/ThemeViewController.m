@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tabBarController.tabBar.hidden = YES;
-    [self showBackButton];
+    [self showBackButton:@"back"];
     //网络请求
     [self getModel];
 }

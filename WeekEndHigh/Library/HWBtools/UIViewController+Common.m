@@ -12,10 +12,16 @@
 @implementation UIViewController (Common)
 
 //导航栏添加返回按钮
-- (void)showBackButton{
+- (void)showBackButton:(NSString *)imageName{
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(0, 0, 44, 44);
-    [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    backBtn.imageEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 10);
+    if ([imageName isEqualToString:@"back"]) {
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    }else{
+        [backBtn setImage:[UIImage imageNamed:@"camera_cancel_up"] forState:UIControlStateNormal];
+    }
+
     [backBtn addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = leftBarBtn;
@@ -24,5 +30,7 @@
 - (void)backButtonAction:(UIButton *)button{
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
 
 @end

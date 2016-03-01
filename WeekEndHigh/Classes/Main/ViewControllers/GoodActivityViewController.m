@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"精选活动";
     self.tabBarController.tabBar.hidden = YES;
-    [self showBackButton];
+    [self showBackButton:@"back"];
     
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [[UIView alloc] init];
