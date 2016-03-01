@@ -150,7 +150,8 @@
 //选择城市
 - (void)selectCityAction:(UIBarButtonItem *)barBtn{
     SelectCityViewController *selectCityVC = [[SelectCityViewController alloc] init];
-    [self.navigationController presentViewController:selectCityVC animated:YES completion:nil];
+    UINavigationController *selectNav = [[UINavigationController alloc] initWithRootViewController:selectCityVC];
+    [self.navigationController presentViewController:selectNav animated:YES completion:nil];
 }
 
 //自定义tableView头部

@@ -927,7 +927,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/aaa/Desktop/周末去哪嗨/WeekEndHigh/WeekEndHigh/Library/HWBtools/Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WeekEndHigh/Library/HWBtools/Prefix.pch";
 				INFOPLIST_FILE = WeekEndHigh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -956,7 +956,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/aaa/Desktop/周末去哪嗨/WeekEndHigh/WeekEndHigh/Library/HWBtools/Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WeekEndHigh/Library/HWBtools/Prefix.pch";
 				INFOPLIST_FILE = WeekEndHigh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
