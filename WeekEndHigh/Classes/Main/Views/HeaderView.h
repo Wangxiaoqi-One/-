@@ -10,4 +10,6 @@
 
 @interface HeaderView : UICollectionReusableView
 
+@property (nonatomic, copy) NSString *name;
+
 @end

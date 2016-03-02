@@ -20,7 +20,7 @@
 #import "HotActivityViewController.h"
 
 
-@interface MainViewController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+@interface MainViewController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, changCityName>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 //全部列表数据
 @property (nonatomic, strong) NSMutableArray *listArray;
@@ -41,6 +41,8 @@
 
 @property (nonatomic, strong) UIButton *themeBtn;
 
+@property (nonatomic, strong) UIButton *leftBtn;
+
 @end
 
 @implementation MainViewController
@@ -51,16 +53,16 @@
     
 //    self.automaticallyAdjustsScrollViewInsets = NO;
     //left
-    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftBtn.frame = CGRectMake(0, 0, 60, 44);
-    [leftBtn setTitle:@"北京" forState:UIControlStateNormal];
-    [leftBtn setImage:[UIImage imageNamed:@"btn_chengshi.png"] forState:UIControlStateNormal];
+    self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.leftBtn.frame = CGRectMake(0, 0, 60, 44);
+    [self.leftBtn setTitle:@"北京" forState:UIControlStateNormal];
+    [self.leftBtn setImage:[UIImage imageNamed:@"btn_chengshi.png"] forState:UIControlStateNormal];
 //    调整button图片的位置
-    leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 40, 0, -20);
+    self.leftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 40, 0, 0);
     //    调整button标题所在的位置，距离Btn顶部，左边，下边，右边的
-    leftBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0);
-    [leftBtn addTarget:self action:@selector(selectCityAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.leftBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0);
+    [self.leftBtn addTarget:self action:@selector(selectCityAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:self.leftBtn];
     leftBarBtn.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = leftBarBtn;
     
@@ -159,6 +161,8 @@
 //选择城市
 - (void)selectCityAction:(UIBarButtonItem *)barBtn{
     SelectCityViewController *selectCityVC = [[SelectCityViewController alloc] init];
+    selectCityVC.delegate = self;
+    selectCityVC.cityName = self.leftBtn.titleLabel.text;
     UINavigationController *selectNav = [[UINavigationController alloc] initWithRootViewController:selectCityVC];
     [self.navigationController presentViewController:selectNav animated:YES completion:nil];
 }
@@ -263,6 +267,10 @@
 -(void)hotActivityButtonAction:(UIButton *)btn{
     HotActivityViewController *hotActivityVC = [[HotActivityViewController alloc] init];
     [self.navigationController pushViewController:hotActivityVC animated:YES];
+}
+
+- (void)changCity:(NSString *)name{
+    [self.leftBtn setTitle:name forState:UIControlStateNormal];
 }
 
 #pragma mark -------------- 轮播图

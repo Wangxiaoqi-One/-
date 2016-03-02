@@ -14,8 +14,9 @@ static NSString *headerIdentifier = @"header";
 
 @interface SelectCityViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, retain) UICollectionView *collectionView;
-@property (nonatomic, retain) NSMutableArray *cityArray;
+@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) NSMutableArray *cityArray;
+@property (nonatomic, strong) HeaderView *headerView;
 
 @end
 
@@ -114,11 +115,21 @@ static NSString *headerIdentifier = @"header";
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
    UICollectionReusableView *reusableView = nil;
     if (kind == UICollectionElementKindSectionHeader) {
-       HeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerIdentifier forIndexPath:indexPath];
-        reusableView = headerView;
+       self.headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerIdentifier forIndexPath:indexPath];
+        self.headerView.name = self.cityName;
+        reusableView = self.headerView;
     }
     return reusableView;
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    self.headerView.name = self.cityArray[indexPath.row];
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(changCity:)]) {
+        [self.delegate changCity:self.cityArray[indexPath.row]];
+    }
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
